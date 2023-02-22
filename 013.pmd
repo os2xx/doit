@@ -1,0 +1,204 @@
+---
+title:  "Debian Guest Preparation"
+description:
+  Debian Guest Preparation
+tagline: Install Debian, VirtualBox, Preparation
+---
+
+[&#x213C;](#idxXXX)<br id="idx000">
+## Table of Content
+
+* [Installing Debian Gnu/Linux](#idx009)
+* [Export (OVA File)](#idx014)
+* [Rename DEB231-00-0 to DEB231-00-1](#idx017)
+* [Fine Tunning](#idx019)
+
+[&#x213C;](#)<br id="idx009">
+## Installing Debian Gnu/Linux
+
+These are just examples, the whole examples, and nothing but examples. So please help me, GNU/Linux!
+You might select other options based on your faith and religion 
+(i.e., kepercayaan and keyakinan masing-masing).
+
+When doing the installation, most of the answers are 
+<span style="color:red; font-weight:bold; font-size:larger;">DEFAULT</span>. 
+Possible different answers will be marked with 
+"<span style="color:red; font-weight:bold; font-size:larger;">ARROWS</span>."
+
+* Name: DEB231-00-90
+* Type: Linux
+* Version: Debian (64 bit)
+* Base Memory: 4096 MB
+* Processors: 6
+* HardDisk
+  * Size: 24 GB
+  * Type: VDI
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-009.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx010">
+
+* When doing the installation, most of the answers are 
+  <span style="color:red; font-weight:bold; font-size:larger;">DEFAULT</span>. 
+  Possible different answers will be marked with 
+  "<span style="color:red; font-weight:bold; font-size:larger;">ARROWS</span>."
+* Select: EXPERT MODE
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-010.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx011">
+
+* Name: DEB231-00-90
+* Type: Linux
+* Version: Debian (64 bit)
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-011.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx012">
+
+* Hardware:
+  * Base Memory: 4096 MB
+    * "<span style="color:red; font-weight:bold; font-size:larger;">Make sure that you don't cross the red line!</span>"
+  * Processors: 6
+    * "<span style="color:red; font-weight:bold; font-size:larger;">Make sure that you don't cross the red line!</span>"
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-012.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx013">
+
+* When doing the installation, most of the answers are 
+  <span style="color:red; font-weight:bold; font-size:larger;">DEFAULT</span>. 
+  Possible different answers will be marked with 
+  "<span style="color:red; font-weight:bold; font-size:larger;">ARROWS</span>."
+* HardDisk
+  * Size: 24 GB
+  * Type: VDI
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-013.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx014">
+## Export (OVA File)
+
+* OVA: DEB231-00-0
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-014.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx015">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-015.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx016">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-016.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx017">
+## Rename DEB231-00-0 to DEB231-00-1
+
+* In "General", click "Name:DEB231-00-0"
+* Set "Name:DEB231-00-1"
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-017.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx018">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-018.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx019">
+## Fine Tunning
+
+* General: Basic
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-019.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx020">
+
+* General: Advanced
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-020.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx021">
+
+* System: MotherBoard
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-021.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx022">
+
+* System: Processor
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-022.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx023">
+
+* System: Acceleration
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-023.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx024">
+
+* Display: Screen
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-024.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx025">
+
+* Storage
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-025.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx026">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-026.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx027">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-027.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx028">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-028.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx029">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-029.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx030">
+
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-030.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx031">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-031.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx032">
+
+* Audio: OFF
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-032.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx033">
+
+* Network: Adapter 1
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-033.jpg" style="width:960px;"><br><br>
+
+<!-- ZCZC NNNN -->
+[&#x213C;](#)<br id="idx034">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-034.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx035">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-035.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx036">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-036.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx037">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-037.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idxXXX"><br>
+

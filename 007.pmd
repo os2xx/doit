@@ -1,0 +1,252 @@
+---
+title:  "VirtualBox: How to compile Linux Kernel on a Debian Guest"
+description:
+   This page is about how to compile Linux Kernel on Debian VirtualBox Guest (AMD64).
+tagline:
+   Linux, Kernel, VirtualBox, Debian, AMD64.
+---
+
+<br id="idx01">
+## Debian Packages
+
+* See <https://osp4diss.vlsm.org/osp-103.html> for more details.
+
+<br id="idx02">
+## Download Latest STABLE Kernel
+
+* Fetch the latest STABLE kernel from <https://kernel.org/>.
+
+```
+# START =============================================================
+STABLE=$(wget -O - -o /dev/null https://www.kernel.org/finger_banner | awk '/stable/ {print $NF; exit}')
+MAJOR=$(echo $STABLE | cut -d. -f1)
+URL="https://kernel.org/pub/linux/kernel/v$MAJOR.x"
+KERNEL="linux-$STABLE.tar.xz"
+TARBALL="linux-$STABLE.tar"
+PGP="linux-$STABLE.tar.sign"
+KURL="$URL/$KERNEL"
+PURL="$URL/$PGP"
+
+# ===================================================================
+# Wget the latest kernel stable version
+wget -c $KURL
+# ===================================================================
+# Wget the signature
+wget -c $PURL
+# ===================================================================
+# Locate Keys
+gpg --locate-keys torvalds@kernel.org gregkh@kernel.org
+
+```
+
+<br id="idx02a">
+## Sign Key (optional)
+
+```
+gpg --sign-key gregkh@kernel.org
+
+```
+
+<br id="idx03">
+## Uncompress the file and verify
+
+```
+# ===================================================================
+# Uncompress
+unxz $KERNEL
+# Verify
+gpg --verify $PGP $TARBALL
+
+```
+
+<br id="idx04">
+## Extract TAR file
+
+```
+# ===================================================================
+tar xvf $TARBALL
+# ===================================================================
+cd linux-$STABLE
+
+```
+
+<br id="idx05">
+## Overkilled Cleaning Habit
+
+Once in a while, some Bozo will ask about why not "make distclean," 
+or "make mrproper," or "make clean." 
+Ok, this is the way! [&#x213C;](#idx10)
+
+```
+make distclean; make mrproper; make clean;
+
+```
+
+<br>
+<hr>
+<br>
+
+
+<br id="idx06a">
+## AMD64 Option 1: Reusing ".config" files
+* <span style="color:red;font-weight:bold;">If copying a **wrong** ".config" file,
+  you might create a massive kernel with huge modules.</span>
+  * Consider copying a working ".config" file from the "/boot/" directory.
+  * Or, try to [download this ".config" file](assets/configs/config-linux-kernel-amd64.txt)
+    * See also [Linux/AMD64 Kernel Config for VirtualBox](008.md).
+  * Or, try to reuse any .config file
+* Run:
+
+```
+yes "" | make oldconfig
+
+```
+
+<br id="idx06b">
+## AMD64 OPTION 2: A ".config" file from scratch
+* If OPTION 1 failed, consider making a ".config" file from scratch with:
+
+```
+make x86_64_defconfig
+yes "" | make oldconfig
+
+```
+
+<br>
+<hr>
+<br>
+<br id="idx07">
+## Menuconfig
+
+```
+make menuconfig
+
+```
+
+<br id="idx08">
+### E.g., for cbkadal
+
+```
+General setup  --->
+  (-cbkadal-10) Local version - append to kernel release
+  Kernel compression mode (XZ)  --->
+  (cbkadal) Default hostname
+  <*> Kernel .config support
+  [*] Enable access to .config through /proc/config.gz
+  <*> Enable kernel headers through /sys/kernel/kheaders.tar.xz
+Processor type and features  --->
+  [ ] EFI runtime service support 
+Device Drivers --->
+  Firmware Drivers --->
+    [*] Disable EFI runtime services support by default 
+File systems  --->
+  <*> FUSE (Filesystem in Userspace) support
+  <*>   Character device in Userspace support
+  <*>   Virtio Filesystem 
+Security options  --->
+  [ ] NSA SELinux Support
+  [*] AppArmor support
+  [*]   Enable introspection of sha1 hashes for loaded profiles
+  [*]     Enable policy hash introspection by default
+  First legacy 'major LSM' to be initialized
+    (X) AppArmor
+Kernel hacking  --->  
+  Compile-time checks and compiler options  --->
+    [*] Install uapi headers to usr/include
+
+```
+
+<br id="idx09">
+## Compile (make)
+
+```
+time make
+
+```
+
+* FYI Compile Time:
+  * (Linux) Intel(R) Core(TM) i5-9400F CPU @ 2.90GHz
+    * real	3m5.825s
+    * user	14m51.339s
+    * sys	1m59.721s
+  * (Windows 10) Intel(R) Core(TM) i5-9400F CPU @ 2.90GHz
+    * real    4m17.702s
+    * user    21m29.718s
+    * sys     2m21.400s
+  * (Linux) Lenovo E135 (AMD E2-2000 APU with Radeon(tm) HD Graphics)
+    * real  123m25,746s
+    * user  211m58,046s
+    * sys  28m1,298s
+  * (Linux) Lenovo Yoga 300 (Intel(R) Celeron(R) CPU N2840 @2.16GHz)
+    * real  69m6,574s
+    * user  115m1,006s
+    * sys  19m12,436s
+  * (Windows 10) Lenovo Yoga 300 (Intel(R) Celeron(R) CPU N2840 @2.16GHz)
+    * real    4580m11.804s (<span style="color:red;font-weight:bold;">Yes, there is something wrong here!</span>)
+    * user    6900m36.555s
+    * sys     864m34.820s
+      <br><img src="{{ site.baseurl }}/assets/images/doit-009.jpg" style="width:960px;">
+      * <span style="color:red;font-weight:bold;">One More Time</span> (after fixing the Windows 10 drivers):
+        * real    72m26.981s
+        * user    114m32.041s
+        * sys     24m54.993s
+
+<br id="idx10">
+## Install
+* User: <span style="color:red;font-weight:bold;">root</span>
+  * Use "sudo" if you wish.
+  * Change Directory (cd) to the linux kernel source!
+
+```
+# USER: ROOT ============
+make modules_install
+
+make install
+
+make headers_install INSTALL_HDR_PATH=/usr
+
+```
+
+[&#x213C;](#idx05)
+<br id="idx11">
+## Known Boot Errors
+
+```
+ata1.00: Read log 0x00 page 0x00 failed, Emask 0x1
+
+```
+
+<br id="idx12">
+## Linux Firmware
+* URL: <https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/>
+  * E.g. TARBALL "linux-firmware-20220509.tar.gz"
+    * open the TARBALL
+    * Go to folder "linux-firmware-20220509/"
+    * Copy the missing modules into "/lib/firmware/". E.g. (ROOT),
+
+```
+cp -r i915/ /lib/firmware/
+cp -r tigon/ /lib/firmware/
+cp -r e100/ /lib/firmware/
+cp -r rtl_nic/ /lib/firmware/
+
+```
+
+<br id="idx13">
+## Old Modules
+* You have to delete old modules (/lib/modules) and old config (/boot/) files manually.
+  Do not forget to "update-grub".
+* Visit (ROOT):
+
+```
+cd /lib/modules/
+ls -al
+cd /boot/
+ls -al
+
+```
+
+<br id="idx14">
+{% include inc006.html %}
+<br> 
+

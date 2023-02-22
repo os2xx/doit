@@ -1,0 +1,188 @@
+---
+title:  "Debian Guest Installation"
+description:
+  Debian Guest Installation
+tagline: Debian Guest, Installation, VirtualBox
+---
+
+[&#x213C;](#idxXXX)<br id="idx000">
+## Table of Content
+
+* [Installing Debian Gnu/Linux](#idx038)
+* [TBA](#idx999)
+
+[&#x213C;](#)<br id="idx038">
+## Installing Debian Gnu/Linux
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-038.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx039">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-039.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx040">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-040.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx041">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-041.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx042">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-042.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx043">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-043.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx044">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-044.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx045">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-045.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx046">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-046.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx047">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-047.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx048">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-048.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx049">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-049.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx050">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-050.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx051">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-051.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx052">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-052.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx053">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-053.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx054">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-054.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx055">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-055.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx056">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-056.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx057">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-057.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx058">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-058.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx059">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-059.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx060">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-060.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx061">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-061.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx062">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-062.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx063">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-063.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx064">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-064.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx065">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-065.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx066">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-066.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx067">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-067.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx068">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-068.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx069">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-069.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx070">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-070.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx071">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-071.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx072">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-072.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx073">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-073.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx074">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-074.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx075">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-075.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx076">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-076.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx077">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-077.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx078">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-078.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx079">
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-079.jpg" style="width:960px;"><br><br>
+
+<!-- ZCZC NNNN -->
+[&#x213C;](#)<br id="idx999">
+## TBA
+
+[&#x213C;](#)<br id="idxXXX"><br>
+

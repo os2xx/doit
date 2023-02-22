@@ -1,0 +1,18 @@
+---
+title:  "VirtualBox: Linux/AMD64 6.2 Kernel Configuration"
+description:
+   This page is about how to compile Linux Kernel AMD64 on Debian VirtualBox Guest.
+tagline:
+   Linux, Kernel, VirtualBox, Debian, AMD64
+---
+
+<br>
+### VirtualBox: Linux/AMD64 6.2 Kernel Configuration
+
+* [Download Config](assets/configs/config-linux-kernel-amd64.txt)
+  * See also [How to compile Linux Kernel on Debian VirtualBox Guest](007.md)
+
+```
+(> assets/configs/config-linux-kernel-amd64.txt <)
+```
+

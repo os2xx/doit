@@ -1,0 +1,99 @@
+---
+title:  "Installing VirtualBox on Windows"
+description:
+  Installing VirtualBox on Windows
+tagline: VirtualBox, Windows
+---
+
+[&#x213C;](#idxXX)<br id="idx00">
+## Table of Content
+
+* [Debian ISO Image](#idx01)
+* [Download Manager](#idx02)
+* [Intel (VMX) Virtualization Technology](#idx03)
+* [Hyper-V](#idx04)
+* [Installing VirtualBox](#idx05)
+
+[&#x213C;](#)<br id="idx01">
+## Debian ISO Image
+
+You can download the Debian ISO file from the official Debian website at the following URL:<br>
+[https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/)
+
+* The ISO image <span style="color:red; font-weight:bold; font-size:larger;">
+  is/was debian-11.6.0-amd64-netinst.iso
+  </span> --- but this is subject to change.
+
+[&#x213C;](#)<br id="idx02">
+## Download Manager
+
+It would be best to use a download manager when downloading large or multiple files at once,
+as it can help make the downloading process more efficient and reliable.
+Additionally, suppose you have a slower internet connection or experience frequent interruptions while downloading.
+In that case, a download manager can help improve your download speed and stability.
+
+* Download from [https://www.freedownloadmanager.org/](https://www.freedownloadmanager.org/).
+* Or, install a plug-in on your browser.
+
+[&#x213C;](#)<br id="idx03">
+## Intel (VMX) Virtualization Technology
+
+You may need to enable VMX (Virtual Machine Extensions). 
+Check your PC firmware configuration manual on how to do this.
+E.g.,
+
+* VMX ENABLED:
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-081-VMX-enable.jpg" style="width:960px;"><br><br>
+* VMX DISABLED:
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-080-VMX-disable.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx04">
+## Hyper-V
+
+You may need to disable Hyper-V on Microsoft Windows to install VirtualBox. 
+You can do this by running the following command in Admin PowerShell:
+
+```
+dism.exe /Online /Disable-Feature:Microsoft-Hyper-V
+
+```
+
+[&#x213C;](#)<br id="idx05">
+## Installing VirtualBox
+
+* Download the latest version of VirtualBox for Windows from the Oracle website
+  [https://www.virtualbox.org/wiki/Downloads/](https://www.virtualbox.org/wiki/Downloads/)
+  * The VirtualBox version <span style="color:red; font-weight:bold; font-size:larger;">
+    is/was 7.0.6
+    </span> --- but this is subject to change.
+  * This example will use the previous version, "7.0.4".
+* Once the download is complete, run the installer file by double-clicking on it.
+* You will be prompted with a User Account Control (UAC) window. Click on "Yes" to continue.
+* The VirtualBox Setup Wizard will appear. Click on "Next" to begin the installation process.
+* When doing the installation, most of the answers are 
+  <span style="color:red; font-weight:bold; font-size:larger;">DEFAULT</span>. 
+  Possible different answers will be marked with 
+  "<span style="color:red; font-weight:bold; font-size:larger;">ARROWS</span>."
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-002.jpg" style="width:960px;"><br><br>
+
+* Read the license agreement, and if you agree, select "I Agree" and click "Next."
+* Choose the defaults by clicking either "Yes" or "Next."
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-003.jpg" style="width:960px;"><br><br>
+<img src="{{ site.baseurl }}/assets/images/debVBOX-004.jpg" style="width:960px;"><br><br>
+<img src="{{ site.baseurl }}/assets/images/debVBOX-005.jpg" style="width:960px;"><br><br>
+
+* Click "Install" to begin the installation process
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-006.jpg" style="width:960px;"><br><br>
+<img src="{{ site.baseurl }}/assets/images/debVBOX-007.jpg" style="width:960px;"><br><br>
+
+* Once the installation is complete, you will be prompted to click "Finish."
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-008.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idxXX"><br>
+

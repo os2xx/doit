@@ -1,0 +1,14 @@
+Name: DEB-231Wvbox-000a (your may choose a different guest name).
+Processors (Cores): 2 (check your CPU!)
+Memory = 2048 MB (or more)
+Storage1 = 32 GB (dynamically allocated)
+Storage2 = 32 GB (dynamically allocated)
+SSH: NAT from host (127.0.0.1 port 6022) to guest (10.0.2.15 port 22)
+
+Set-PSReadlineOption -BellStyle None
+Set-PSReadlineOption -BellStyle Audible
+
+/etc/inputrc: set bell-style none
+
+.bashrc: color_prompt=
+
