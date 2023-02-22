@@ -54,6 +54,8 @@ tagline: VirtualBox, VirtualDisk
 [&#x213C;](#)<br id="idx010">
 ## Crosscheck /dev/sdb
 
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+
 ```
 root:~# lsblk
 
@@ -70,6 +72,8 @@ root:~#
 
 [&#x213C;](#)<br id="idx011">
 ## VirtualDisk Format
+
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
 
 ```
 root:~# mkfs -v -t ext4 /dev/sdb
@@ -105,6 +109,8 @@ root:~#
 [&#x213C;](#)<br id="idx012">
 ## Mounting /mnt/lfs
 
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+
 ```
 root:~# mkdir -pv /mnt/lfs
 
@@ -124,7 +130,10 @@ root:~#
 ```
 
 [&#x213C;](#)<br id="idx013">
-## Add to /etc/fstab
+## Add to file /etc/fstab
+
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+* Edit file "/etc/fstab" with your favorite editor, and add:
 
 ```
 /dev/sdb  /mnt/lfs ext4   defaults   1  1
