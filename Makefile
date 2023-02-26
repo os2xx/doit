@@ -1,13 +1,14 @@
+# REV20: Sun 26 Feb 2023 12:00
 # REV19: Tue 21 Feb 2023 20:00
 # REV09: Fri 27 Jan 2023 10:00
-# REV07: Wed 14 Dec 2022 17:00
 # REV03: Thu 14 Jul 2022 07:00
 # REV01: Sat 29 Jan 2022 13:00
 # START: Mon 15 Feb 2021 09:00
 
 SITEURL="doit.vlsm.org"
 
-ALL: 004.md 005.md 006.md 007.md 008.md 009.md 010.md 011.md 012.md 013.md 014.md 015.md .siteHack
+ALL: 004.md 005.md 006.md 007.md 008.md 009.md 010.md 011.md 012.md 013.md 014.md 015.md \
+     016.md .siteHack
 
 004.md: 004.pmd _config.yml Gemfile _layouts/default.html Makefile \
         _includes/navbar.html \
@@ -49,6 +50,9 @@ ALL: 004.md 005.md 006.md 007.md 008.md 009.md 010.md 011.md 012.md 013.md 014.m
 
 015.md: 015.pmd
 	python assets/scripts/includeScript.py < 015.pmd > 015.md
+
+016.md: 016.pmd
+	python assets/scripts/includeScript.py < 016.pmd > 016.md
 
 
 .siteHack: _site/sitemap.xml
