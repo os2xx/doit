@@ -8,50 +8,28 @@ tagline: UTM MacOS Silicon, VirtualDisk
 [&#x213C;](#idxXXX)<br id="idx000">
 ## Table of Content
 
-* [UTM MacOS Silicon: Adding A 32 GB VirtualDisk](#idx001)
-* [Crosscheck /dev/vdb](#idx010)
+* [UTM MacOS Silicon: Adding A 32 GB VirtualDisk](#idx010)
+* [Crosscheck /dev/vdb](#idx010a)
 * [VirtualDisk Format](#idx011)
 * [Mounting /mnt/lfs](#idx012)
 * [Add to /etc/fstab](#idx013)
 
-[&#x213C;](#)<br id="idx001">
+[&#x213C;](#)<br id="idx010">
 ## UTM MacOS Silicon: Adding A 32 GB VirtualDisk
 
-<img src="{{ site.baseurl }}/assets/images/do23-001.jpg" style="width:960px;"><br><br>
+<img src="{{ site.baseurl }}/assets/images/do23-010.jpg" style="width:960px;"><br><br>
 
-[&#x213C;](#)<br id="idx002">
+[&#x213C;](#)<br id="idx011">
 
-<img src="{{ site.baseurl }}/assets/images/do23-002.jpg" style="width:960px;"><br><br>
+* DISK SIZE (/dev/vdb): 32 GB
 
-[&#x213C;](#)<br id="idx003">
+<img src="{{ site.baseurl }}/assets/images/do23-011.jpg" style="width:960px;"><br><br>
 
-<img src="{{ site.baseurl }}/assets/images/do23-003.jpg" style="width:960px;"><br><br>
+[&#x213C;](#)<br id="idx012">
 
-[&#x213C;](#)<br id="idx004">
+<img src="{{ site.baseurl }}/assets/images/do23-012.jpg" style="width:960px;"><br><br>
 
-<img src="{{ site.baseurl }}/assets/images/do23-004.jpg" style="width:960px;"><br><br>
-
-[&#x213C;](#)<br id="idx005">
-
-<img src="{{ site.baseurl }}/assets/images/do23-005.jpg" style="width:960px;"><br><br>
-
-[&#x213C;](#)<br id="idx006">
-
-<img src="{{ site.baseurl }}/assets/images/do23-006.jpg" style="width:960px;"><br><br>
-
-[&#x213C;](#)<br id="idx007">
-
-<img src="{{ site.baseurl }}/assets/images/do23-007.jpg" style="width:960px;"><br><br>
-
-[&#x213C;](#)<br id="idx008">
-
-<img src="{{ site.baseurl }}/assets/images/do23-008.jpg" style="width:960px;"><br><br>
-
-[&#x213C;](#)<br id="idx009">
-
-<img src="{{ site.baseurl }}/assets/images/do23-009.jpg" style="width:960px;"><br><br>
-
-[&#x213C;](#)<br id="idx010">
+[&#x213C;](#)<br id="idx010a">
 ## Crosscheck /dev/vdb
 
 * Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
@@ -61,12 +39,13 @@ tagline: UTM MacOS Silicon, VirtualDisk
 root:~# lsblk
 
 NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
-sda      8:0    0   24G  0 disk 
-├─sda1   8:1    0   23G  0 part /
-├─sda2   8:2    0    1K  0 part 
-└─sda5   8:5    0  975M  0 part [SWAP]
-vdb      8:16   0   32G  0 disk 
-nullb0 253:0    0  250G  0 disk 
+sr0     11:0    1 1024M  0 rom  
+vda    254:0    0   24G  0 disk 
+|-vda1 254:1    0  512M  0 part /boot/efi
+|-vda2 254:2    0 22.5G  0 part /
+`-vda3 254:3    0  976M  0 part [SWAP]
+vdb    254:16   0   32G  0 disk 
+
 root:~# 
 
 ```
@@ -82,6 +61,7 @@ root:~# mkfs -v -t ext4 /dev/vdb
 
 mke2fs 1.46.2 (28-Feb-2021)
 fs_types for mke2fs.conf resolution: 'ext4'
+Discarding device blocks: done                            
 Filesystem label=
 OS type: Linux
 Block size=4096 (log=2)
@@ -94,7 +74,7 @@ Maximum filesystem blocks=2155872256
 256 block groups
 32768 blocks per group, 32768 fragments per group
 8192 inodes per group
-Filesystem UUID: c98ea5d6-ab11-4b18-b7fb-7e336b207ee2
+Filesystem UUID: 8e998d63-f3b1-4c1f-b75e-a0f25febc128
 Superblock backups stored on blocks: 
 	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
 	4096000, 7962624
@@ -118,6 +98,10 @@ root:~#
 root:~# mkdir -pv /mnt/lfs
 
 mkdir: created directory '/mnt/lfs'
+
+root:~# mount -v /dev/sdb /mnt/lfs
+
+mount: /mnt/lfs: special device /dev/sdb does not exist.
 
 root:~# mount -v /dev/vdb /mnt/lfs
 
