@@ -6,12 +6,12 @@ tagline:
    Linux, Kernel, VirtualBox, Debian, AMD64.
 ---
 
-<br id="idx01">
+[&#x213C;](#idxXXX)<br id="idx01">
 ## Debian Packages
 
 * See <https://osp4diss.vlsm.org/osp-103.html> for more details.
 
-<br id="idx02">
+[&#x213C;](#)<br id="idx02">
 ## Download Latest STABLE Kernel
 
 * Fetch the latest STABLE kernel from <https://kernel.org/>.
@@ -39,7 +39,7 @@ gpg --locate-keys torvalds@kernel.org gregkh@kernel.org
 
 ```
 
-<br id="idx02a">
+[&#x213C;](#)<br id="idx02a">
 ## Sign Key (optional)
 
 ```
@@ -47,7 +47,7 @@ gpg --sign-key gregkh@kernel.org
 
 ```
 
-<br id="idx03">
+[&#x213C;](#)<br id="idx03">
 ## Uncompress the file and verify
 
 ```
@@ -59,7 +59,7 @@ gpg --verify $PGP $TARBALL
 
 ```
 
-<br id="idx04">
+[&#x213C;](#)<br id="idx04">
 ## Extract TAR file
 
 ```
@@ -70,7 +70,7 @@ cd linux-$STABLE
 
 ```
 
-<br id="idx05">
+[&#x213C;](#)<br id="idx05">
 ## Overkilled Cleaning Habit
 
 Once in a while, some Bozo will ask about why not "make distclean," 
@@ -87,7 +87,7 @@ make distclean; make mrproper; make clean;
 <br>
 
 
-[&#x213C;](#idx10)<br id="idx06a">
+[&#x213C;](#)<br id="idx06a">
 ## AMD64 Option 1: Reusing ".config" files
 * <span style="color:red;font-weight:bold;">If copying a **wrong** ".config" file,
   you might create a massive kernel with huge modules.</span>
@@ -102,7 +102,7 @@ yes "" | make oldconfig
 
 ```
 
-<br id="idx06b">
+[&#x213C;](#)<br id="idx06b">
 ## AMD64 OPTION 2: A ".config" file from scratch
 * If OPTION 1 failed, consider making a ".config" file from scratch with:
 
@@ -115,7 +115,7 @@ yes "" | make oldconfig
 <br>
 <hr>
 <br>
-[&#x213C;](#idx10)<br id="idx07">
+[&#x213C;](#)<br id="idx07">
 ## Menuconfig
 
 ```
@@ -156,7 +156,7 @@ Kernel hacking  --->
 
 ```
 
-[&#x213C;](#idx10)<br id="idx09">
+[&#x213C;](#)<br id="idx09">
 ## Compile (make)
 
 ```
@@ -164,7 +164,7 @@ time make
 
 ```
 
-* FYI Compile Time:
+* FYI Compile Time: [&#x213C;](#idx10)
   * (Linux) Intel(R) Core(TM) i5-9400F CPU @ 2.90GHz
     * real	3m5.825s
     * user	14m51.339s
@@ -191,11 +191,11 @@ time make
         * user    114m32.041s
         * sys     24m54.993s
 
-[&#x213C;](#idx05)<br id="idx10">
-## Install
+[&#x213C;](#)<br id="idx10">
+## Install 
 * User: <span style="color:red;font-weight:bold;">root</span>
   * Use "sudo" if you wish.
-  * Change Directory (cd) to the linux kernel source!
+  * Change Directory (cd) to the linux kernel source!  [&#x213C;](#idx05)
 
 ```
 # USER: ROOT ============
@@ -207,7 +207,7 @@ make headers_install INSTALL_HDR_PATH=/usr
 
 ```
 
-[&#x213C;](#idx05)<br id="idx11">
+[&#x213C;](#)<br id="idx11">
 ## Known Boot Errors
 
 ```
@@ -231,7 +231,7 @@ cp -r rtl_nic/ /lib/firmware/
 
 ```
 
-<br id="idx13">
+[&#x213C;](#)<br id="idx13">
 ## Old Modules
 * You have to delete old modules (/lib/modules) and old config (/boot/) files manually.
   Do not forget to "update-grub".
@@ -245,7 +245,7 @@ ls -al
 
 ```
 
-<br id="idx14">
+[&#x213C;](#)<br id="idx14">
 {% include inc006.html %}
 <br> 
 
