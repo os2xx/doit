@@ -6,12 +6,12 @@ tagline:
    Linux, Kernel, VirtualBox, Debian, AARCH64, ARM64.
 ---
 
-<br id="idx01">
+[&#x213C;](#idxXXX)<br id="idx01">
 ## Debian Packages
 
 * See <https://osp4diss.vlsm.org/osp-103.html> for more details.
 
-<br id="idx02">
+[&#x213C;](#)<br id="idx02">
 ## Download Latest STABLE Kernel
 
 * Fetch the latest STABLE kernel from <https://kernel.org/>.
@@ -39,7 +39,7 @@ gpg --locate-keys torvalds@kernel.org gregkh@kernel.org
 
 ```
 
-<br id="idx02a">
+[&#x213C;](#)<br id="idx02a">
 ## Sign Key (optional)
 
 ```
@@ -59,7 +59,7 @@ gpg --verify $PGP $TARBALL
 
 ```
 
-<br id="idx04">
+[&#x213C;](#)<br id="idx04">
 ## Extract TAR file
 
 ```
@@ -70,7 +70,7 @@ cd linux-$STABLE
 
 ```
 
-<br id="idx05">
+[&#x213C;](#)<br id="idx05">
 ## Overkilled Cleaning Habit
 
 Once in a while, some Bozo will ask about why not "make distclean," 
@@ -86,7 +86,7 @@ make distclean; make mrproper; make clean;
 <hr>
 <br>
 
-<br id="idx06aa">
+[&#x213C;](#)<br id="idx06aa">
 ## ARM64 Option 1: Reusing ".config" files
 * <span style="color:red;font-weight:bold;">If copying a **wrong** ".config" file,
   you might create a massive kernel with huge modules.</span>
@@ -101,7 +101,7 @@ yes "" | make oldconfig
 
 ```
 
-<br id="idx06bb">
+[&#x213C;](#)<br id="idx06bb">
 ## ARM64 OPTION 2: A ".config" file from scratch
 * If OPTION 1 failed, consider making a ".config" file from scratch with:
 
@@ -114,7 +114,7 @@ yes "" | make oldconfig
 <br>
 <hr>
 <br>
-<br id="idx07">
+[&#x213C;](#)<br id="idx07">
 ## Menuconfig
 
 ```
@@ -122,7 +122,7 @@ make menuconfig
 
 ```
 
-<br id="idx08">
+[&#x213C;](#)<br id="idx08">
 ### E.g., for cbkadal
 
 ```
@@ -148,7 +148,7 @@ Kernel hacking  --->
 
 ```
 
-<br id="idx09">
+[&#x213C;](#)<br id="idx09">
 ## Compile (make)
 
 ```
@@ -162,11 +162,11 @@ time make
     * user	14m51.339s
     * sys	1m59.721s
 
-<br id="idx10">
+[&#x213C;](#)<br id="idx10">
 ## Install
 * User: <span style="color:red;font-weight:bold;">root</span>
   * Use "sudo" if you wish.
-  * Change Directory (cd) to the linux kernel source!
+  * Change Directory (cd) to the linux kernel source!  [&#x213C;](#idx05)
 
 ```
 # USER: ROOT ============
@@ -178,8 +178,7 @@ make headers_install INSTALL_HDR_PATH=/usr
 
 ```
 
-[&#x213C;](#idx05)
-<br id="idx11">
+[&#x213C;](#)<br id="idx11">
 ## Known Boot Errors
 
 ```
@@ -187,10 +186,10 @@ ata1.00: Read log 0x00 page 0x00 failed, Emask 0x1
 
 ```
 
-<br id="idx12">
+[&#x213C;](#)<br id="idx12">
 ## Linux Firmware
 * URL: <https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/>
-  * E.g. TARBALL "linux-firmware-20220509.tar.gz"
+  * E.g. TARBALL "linux-firmware-20220509.tar.gz" 
     * open the TARBALL
     * Go to folder "linux-firmware-20220509/"
     * Copy the missing modules into "/lib/firmware/". E.g. (ROOT),
@@ -203,7 +202,7 @@ cp -r rtl_nic/ /lib/firmware/
 
 ```
 
-<br id="idx13">
+[&#x213C;](#)<br id="idx13">
 ## Old Modules
 * You have to delete old modules (/lib/modules) and old config (/boot/) files manually.
   Do not forget to "update-grub".
@@ -217,7 +216,7 @@ ls -al
 
 ```
 
-<br id="idx14">
+[&#x213C;](#)<br id="idx14">
 {% include inc006.html %}
 <br> 
 
