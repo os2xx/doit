@@ -9,50 +9,95 @@ tagline: Debian Guest, Installation, VirtualBox
 ## Table of Content
 
 * [Installing Debian Gnu/Linux](#idx038)
-* [TBA](#idx999)
+* [START Install](#idx039)
+* [Debian Installer Menu](#idx042)
+  * [Select A Language](#idx043)
+  * [Select Your Location](#idx044)
+  * [Configure Locales](#idx047)
+  * [Configure Keyboad](#idx048)
+  * [Configure Network](#idx050)
+  * [Setup Users and Passwords](#idx052)
+  * [Configure The Clock](#idx056)
+  * [Partition Disk](#idx057)
+  * [Install Base System](#idx063)
+  * [Configure The Package Manager](#idx064)
+  * [Configuring Popularity Contest](#idx069)
+  * [Software Selection](#idx071)
+  * [Install The GRUB Boot Loader](#idx073)
+  * [Finish Installation](#idx076)
+* [REBOOT](#idx078)
+* [TEST LOGIN](#idx082)
+* [CONSOLE SHUTDOWN](#idx084)
 
 [&#x213C;](#)<br id="idx038">
 ## Installing Debian Gnu/Linux
+
+* VirtualBox Name: DEB00-2
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-038.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx039">
 
+## START Install
+
+* CLICK: START
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-039.jpg" style="width:960px;"><br><br>
 
-[&#x213C;](#)<br id="idx040">
-
 <img src="{{ site.baseurl }}/assets/images/debVBOX-040.jpg" style="width:960px;"><br><br>
-
-[&#x213C;](#)<br id="idx041">
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-041.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx042">
 
+## Debian Installer Menu
+
+* Graphical Install
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-042.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx043">
+
+### Select A Language
+
+* English
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-043.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx044">
 
+### Select Your Location
+
+* Other (Or else)
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-044.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx045">
+
+* Asia (Or else)
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-045.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx046">
 
+* Indonesia (Or else)
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-046.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx047">
 
+### Configure Locales
+
+* Australia: en_AU.UTF-8
+  * English + 24 Hours
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-047a.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx048">
+
+### Configure Keyboard
+
+* American English
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-048.jpg" style="width:960px;"><br><br>
 
@@ -62,73 +107,122 @@ tagline: Debian Guest, Installation, VirtualBox
 
 [&#x213C;](#)<br id="idx050">
 
+### Configure Network (e.g. cbkadal)
+
+* Hostname: cbkadal
+  * Remember: you are not cbkadal!
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-050.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx051">
+
+* Domain Name: BLANK
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-051.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx052">
 
+### Setup Users and Passwords (e.g. cbkadal)
+
+* ROOT password: cbkadal
+  * Remember: you are not cbkadal!
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-052.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx053">
+
+* New User Name: Cicak BinKadal
+  * Remember: you are not Cicak BinKadal!
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-053.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx054">
 
+* Username: cbkadal
+  * Remember: you are not cbkadal!
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-054.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx055">
+
+* Passwords (e.g. cbkadal)
+  * Remember: you are not cbkadal!
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-055.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx056">
 
+### Configure The Clock
+
+* Western -- WIB (Sumatera, Jakarta, West/Central Kalimantan)
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-056.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx057">
+
+### Partition Disk
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-057.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx058">
 
+* Partitioning Method: Guided -- use entire disk
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-058.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx059">
+
+* Scan Disk to Partitioning
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-059.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx060">
 
+* Partitioning Scheme: All files in one partition
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-060.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx061">
+
+* Finish Partitioning
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-061.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx062">
 
+* Write to Disk: Yes
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-062.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx063">
+
+### Install Base System
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-063.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx064">
 
+### Configure The Package Manager
+
+* Scan Extra Media: NO
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-064.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx065">
+
+* Debian Archive Mirror Country: Indonesia
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-065.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx066">
 
+* Debian Archive Mirror: deb.debian.org
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-066.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx067">
+
+* HTTP Proxy: NONE
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-067.jpg" style="width:960px;"><br><br>
 
@@ -138,6 +232,10 @@ tagline: Debian Guest, Installation, VirtualBox
 
 [&#x213C;](#)<br id="idx069">
 
+### Configuring Popularity Contest
+
+* The default is: NO; but there is nothing wrong if you choose YES!
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-069.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx070">
@@ -145,6 +243,11 @@ tagline: Debian Guest, Installation, VirtualBox
 <img src="{{ site.baseurl }}/assets/images/debVBOX-070.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx071">
+
+### Software Selection
+
+* SSH Server: YES
+* Standard System Utility: YES
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-071.jpg" style="width:960px;"><br><br>
 
@@ -154,9 +257,15 @@ tagline: Debian Guest, Installation, VirtualBox
 
 [&#x213C;](#)<br id="idx073">
 
+### Install The GRUB Boot Loader
+
+* Install the GRUB Boot Loader to your primary drive: YES 
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-073.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx074">
+
+* Install the GRUB Boot Loader: /dev/sda
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-074.jpg" style="width:960px;"><br><br>
 
@@ -166,6 +275,8 @@ tagline: Debian Guest, Installation, VirtualBox
 
 [&#x213C;](#)<br id="idx076">
 
+### Finish Installation
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-076.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx077">
@@ -174,15 +285,57 @@ tagline: Debian Guest, Installation, VirtualBox
 
 [&#x213C;](#)<br id="idx078">
 
+## REBOOT
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-078.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx079">
 
+* Select: Debian GNU/Linux
+
 <img src="{{ site.baseurl }}/assets/images/debVBOX-079.jpg" style="width:960px;"><br><br>
 
-<!-- ZCZC NNNN -->
-[&#x213C;](#)<br id="idx999">
-## TBA
+[&#x213C;](#)<br id="idx082">
+
+## TEST LOGIN
+
+* login: <YOUR ACCOUNT>
+* password: <YOUR PASSWORD>
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-082.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx083">
+
+* Substitute "ROOT"
+  * Enter ROOT password
+
+```
+su -
+
+```
+
+* Test Network/Update (ROOT)
+
+```
+apt-get update
+apt-get dist-upgrade -y
+
+```
+
+* POWEROFF SHUTDOWN
+
+```
+poweroff
+
+```
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-083.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx084">
+
+### CONSOLE SHUTDOWN
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-084.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idxXXX"><br>
 
