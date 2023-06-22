@@ -1,6 +1,8 @@
 ---
-layout: "layout"
-title:  "TITLE"
+title:  TTT
+description:
+   DDD DDD
+tagline: T1, T2
 ---
 
 <img src="{{ site.baseurl }}/assets/images/doit-004.jpg" style="width:960px;">
