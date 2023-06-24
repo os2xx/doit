@@ -1,0 +1,5 @@
+DEBS="
+aptitude
+vim
+"
+apt update && apt upgrade -y && apt install -y $DEBS
