@@ -1,12 +1,24 @@
 ---
-title:  "TTT"
+title:  ROOT .vimrc and .profile
 description:
-  DDD
-tagline: T1, T2
+  Setting the .vimrc and .profile
+tagline: root, .profile, .vimrc
 ---
 
-<br><br>
-<img src="{{ site.baseurl }}/assets/images/dospA-31.jpg" style="width:960px;">
+[&#x213C;](#idxXXX)<br id="idx00">
+
+## ROOT .vimrc and .profile
 <br>
+
+```
+{% raw %}
+(> assets/scripts/025-root.profile <)
+{% endraw %}
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-31.jpg" style="width:960px;">
 <br><br>
+
+[&#x213C;](#)<br id="idxXXX">
 

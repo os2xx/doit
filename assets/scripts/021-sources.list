@@ -1,17 +1,3 @@
----
-title:  sources.list
-description:
-  How set sources.list
-tagline: sources.list
----
-
-[&#x213C;](#idxXXX)<br id="idx00">
-
-## sources.list
-<br>
-
-```
-{% raw %}
 # ROOT
 [ -f /etc/apt/sources.list ] && cp /etc/apt/sources.list /etc/apt/zOLDsources.list
 cat > /etc/apt/sources.list <<< "
@@ -25,11 +11,3 @@ deb https://security.debian.org/   bookworm-security         main contrib non-fr
 # UPDATE - UPGRADE - AUTOREMOVE
 apt update && apt upgrade -y && apt full-upgrade -y && apt --purge autoremove -y
 
-{% endraw %}
-```
-
-<br>
-<img src="{{ site.baseurl }}/assets/images/dospA-24.jpg" style="width:960px;">
-<br><br>
-
-[&#x213C;](#)<br id="idxXXX">

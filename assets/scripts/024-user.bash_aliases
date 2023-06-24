@@ -1,17 +1,3 @@
----
-title:  USER .vimrc and .bash_aliases
-description:
-  Setting .vimrc and .bash_aliases
-tagline: .vimrc, .bash_aliaes
----
-
-[&#x213C;](#idxXXX)<br id="idx00">
-
-## USER .vimrc and .bash_alises
-<br>
-
-```
-{% raw %}
 # USER
 cat > $HOME/.vimrc << EOF
 " START: Thu 22 Jun 2023 11:00
@@ -39,13 +25,4 @@ alias sss='. ~/.profile'
 EOF
 ###
 source $HOME/.profile
-
-{% endraw %}
-```
-
-<br>
-<img src="{{ site.baseurl }}/assets/images/dospA-30.jpg" style="width:960px;">
-<br><br>
-
-[&#x213C;](#)<br id="idxXXX">
 

@@ -1,44 +1,106 @@
 ---
-title:  "TTT"
+title:  Start, Shutdown, Login and Logout
 description:
-  DDD
-tagline: T1, T2
+  How to Start, Shutdown, Login and Logout
+tagline: Start, Shutdown, Login and Logout
 ---
 
-<br><br>
+[&#x213C;](#idxXXX)<br id="idx00">
+
+## List of Contents
+* [Debian: Start (Boot)](#idx01)
+* [Login tty1](#idx02)
+* [Login tty2](#idx03)
+* [Login tty3](#idx04)
+* [Shutdown](#idx05)
+* [Poweroff](#idx06)
+* [ACPI Shutdown](#idx07)
+* [ssh (1)](#idx08)
+* [ssh (2)](#idx09)
+* [ssh (3)](#idx10)
+
+[&#x213C;](#)<br id="idx01">
+
+## Debian Start (Boot)
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-08.jpg" style="width:960px;">
+<br>
+[&#x213C;](#)<br><br>
+
 <img src="{{ site.baseurl }}/assets/images/dospA-09.jpg" style="width:960px;">
 <br>
-<br><br>
+[&#x213C;](#)<br><br>
+
 <img src="{{ site.baseurl }}/assets/images/dospA-10.jpg" style="width:960px;">
 <br>
-<br><br>
+[&#x213C;](#)<br><br>
+
 <img src="{{ site.baseurl }}/assets/images/dospA-11.jpg" style="width:960px;">
-<br>
 <br><br>
+
+[&#x213C;](#)<br id="idx02">
+## Login tty1
+
+<br>
 <img src="{{ site.baseurl }}/assets/images/dospA-12.jpg" style="width:960px;">
-<br>
 <br><br>
+
+[&#x213C;](#)<br id="idx03">
+## Login tty2
+
+<br>
 <img src="{{ site.baseurl }}/assets/images/dospA-13.jpg" style="width:960px;">
-<br>
 <br><br>
+
+[&#x213C;](#)<br id="idx04">
+## Login tty3
+
+<br>
 <img src="{{ site.baseurl }}/assets/images/dospA-14.jpg" style="width:960px;">
-<br>
 <br><br>
+
+[&#x213C;](#)<br id="idx05">
+## Shutdown
+
+<br>
 <img src="{{ site.baseurl }}/assets/images/dospA-15.jpg" style="width:960px;">
-<br>
 <br><br>
+
+[&#x213C;](#)<br id="idx06">
+## Poweroff
+
+<br>
 <img src="{{ site.baseurl }}/assets/images/dospA-16.jpg" style="width:960px;">
-<br>
 <br><br>
+
+[&#x213C;](#)<br id="idx07">
+## ACPI Shutdown
+
+<br>
 <img src="{{ site.baseurl }}/assets/images/dospA-17.jpg" style="width:960px;">
-<br>
 <br><br>
+
+[&#x213C;](#)<br id="idx08">
+## ssh (1)
+
+<br>
 <img src="{{ site.baseurl }}/assets/images/dospA-18.jpg" style="width:960px;">
-<br>
 <br><br>
+
+[&#x213C;](#)<br id="idx09">
+## ssh (2)
+
+<br>
 <img src="{{ site.baseurl }}/assets/images/dospA-19.jpg" style="width:960px;">
-<br>
 <br><br>
+
+[&#x213C;](#)<br id="idx10">
+## ssh (3)
+
+<br>
 <img src="{{ site.baseurl }}/assets/images/dospA-20.jpg" style="width:960px;">
-<br>
 <br><br>
+
+[&#x213C;](#)<br id="idxXXX">
+

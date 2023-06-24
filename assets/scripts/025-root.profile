@@ -1,17 +1,3 @@
----
-title:  ROOT .vimrc and .profile
-description:
-  Setting the .vimrc and .profile
-tagline: root, .profile, .vimrc
----
-
-[&#x213C;](#idxXXX)<br id="idx00">
-
-## ROOT .vimrc and .profile
-<br>
-
-```
-{% raw %}
 # ROOT
 ZCZCMODIFIED="# ZCZCMODIFIED OS232"
 
@@ -38,12 +24,3 @@ $ZCZCMODIFIED
 EOF
 ###
 source $HOME/.profile
-{% endraw %}
-```
-
-<br>
-<img src="{{ site.baseurl }}/assets/images/dospA-31.jpg" style="width:960px;">
-<br><br>
-
-[&#x213C;](#)<br id="idxXXX">
-

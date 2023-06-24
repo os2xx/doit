@@ -1,10 +1,23 @@
 ---
-title:  "TTT"
+title:  sources.list
 description:
-  DDD
-tagline: T1, T2
+  How set sources.list
+tagline: sources.list
 ---
 
-<br><br>
-<img src="{{ site.baseurl }}/assets/images/dospA-24.jpg" style="width:960px;">
+[&#x213C;](#idxXXX)<br id="idx00">
+
+## sources.list
 <br>
+
+```
+{% raw %}
+(> assets/scripts/021-sources.list <)
+{% endraw %}
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-24.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idxXXX">
