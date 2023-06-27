@@ -1,6 +1,6 @@
-cat > .doBASH.sh << EOF
+cat > $HOME/.doBASH.sh << EOF
 #!/bin/bash
-# REV01: Mon 19 Jun 2023 11:00
+# REV02: Tue 27 Jun 2023 15:00
 # START: Fri 16 Jun 2023 16:00
 # .doBASH.sh
 
