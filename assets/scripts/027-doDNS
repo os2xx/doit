@@ -1,0 +1,9 @@
+cat > .doDNS.sh << EOF
+#!/bin/bash
+# REV01: Mon 19 Jun 2023 11:00
+# START: Fri 16 Jun 2023 16:00
+# .doDNS.sh
+
+cat > /etc/resolv.conf <<< "nameserver 8.8.8.8"
+exit
+EOF

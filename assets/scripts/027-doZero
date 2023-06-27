@@ -1,0 +1,16 @@
+cat > .doZERO.sh << EOF
+#!/bin/bash
+# REV01: Mon 19 Jun 2023 11:00
+# START: Fri 16 Jun 2023 16:00
+# .doZERO.sh
+
+df -h /
+dd if=/dev/zero of=/tmp/tmptmp bs=1M
+df -h /
+echo "==="
+rm -f /tmp/tmptmp
+df -h
+sync
+exit
+EOF
+### #####
