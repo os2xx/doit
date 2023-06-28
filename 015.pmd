@@ -10,11 +10,13 @@ tagline: VirtualBox, VirtualDisk
 
 * [VirtualBox: Adding A 32 GB VirtualDisk](#idx001)
   * [DISK SIZE=32 GB](#idx006)
-* [Crosscheck /dev/sdb](#idx010)
-* [VirtualDisk Format](#idx011)
-* [Mounting /mnt/lfs](#idx012)
-* [Add to /etc/fstab](#idx013)
-* [Check /etc/fstab](#idx014)
+* [Crosscheck /dev/sdb](#idx013)
+* [Partitioning 32GB](#idx014)
+* [Crosscheck Again /dev/sdb1 and /dev/sdb2](#idx015)
+* [VirtualDisk Format /dev/sdb1](#idx016)
+* [VirtualDisk Format /dev/sdb2](#idx017)
+* [Mounting /mnt/lfs](#idx018)
+* [Add to /etc/fstab](#idx019)
 
 [&#x213C;](#)<br id="idx001">
 ## VirtualBox: Adding A 32 GB VirtualDisk
@@ -55,109 +57,124 @@ tagline: VirtualBox, VirtualDisk
 
 <img src="{{ site.baseurl }}/assets/images/do23-009.jpg" style="width:960px;"><br><br>
 
-[&#x213C;](#)<br id="idx010">
+[&#x213C;](#)<br id="idx013">
 ## Crosscheck /dev/sdb
 
 * Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
-* Run:<br>lsblk
+* Run:
 
 ```
-root:~# lsblk
-
-NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
-sda      8:0    0   24G  0 disk 
-├─sda1   8:1    0   23G  0 part /
-├─sda2   8:2    0    1K  0 part 
-└─sda5   8:5    0  975M  0 part [SWAP]
-sdb      8:16   0   32G  0 disk 
-nullb0 253:0    0  250G  0 disk 
-root:~# 
+lsblk
 
 ```
 
-[&#x213C;](#)<br id="idx011">
-## VirtualDisk Format
+<img src="{{ site.baseurl }}/assets/images/do23-013.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx014">
+## Partitioning 32GB
+
+| DEVICE    | TYPE | SIZE  |
+| --------- | ---- | ----- |
+| /dev/sdb1 | ext4 | 10 MB |
+| /dev/sdb2 | ext4 | reset |
+
+
+```
+sync
+dd if=/dev/zero of=/dev/sdb bs=1M count=1
+sync
+sfdisk /dev/sdb <<< "
+label: dos
+device: /dev/sdb
+unit: sectors
+sector-size: 512
+/dev/sdb1: type=83, start= 2048, size=20480
+/dev/sdb2: type=83, start=22528
+"
+
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/do23-014.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx015">
+## Crosscheck Again /dev/sdb1 and /dev/sdb2
 
 * Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
-* Run:<br>mkfs -v -t ext4 /dev/sdb
+* Run:
 
 ```
-root:~# mkfs -v -t ext4 /dev/sdb
-
-mke2fs 1.46.2 (28-Feb-2021)
-fs_types for mke2fs.conf resolution: 'ext4'
-Filesystem label=
-OS type: Linux
-Block size=4096 (log=2)
-Fragment size=4096 (log=2)
-Stride=0 blocks, Stripe width=0 blocks
-2097152 inodes, 8388608 blocks
-419430 blocks (5.00%) reserved for the super user
-First data block=0
-Maximum filesystem blocks=2155872256
-256 block groups
-32768 blocks per group, 32768 fragments per group
-8192 inodes per group
-Filesystem UUID: c98ea5d6-ab11-4b18-b7fb-7e336b207ee2
-Superblock backups stored on blocks: 
-	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
-	4096000, 7962624
-
-Allocating group tables: done                            
-Writing inode tables: done                            
-Creating journal (65536 blocks): done
-Writing superblocks and filesystem accounting information: done   
-
-root:~# 
+lsblk
 
 ```
 
-[&#x213C;](#)<br id="idx012">
-## Mounting /mnt/lfs
+<br>
+<img src="{{ site.baseurl }}/assets/images/do23-015.jpg" style="width:960px;"><br><br>
+
+
+[&#x213C;](#)<br id="idx016">
+## VirtualDisk Format /dev/sdb1
 
 * Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
-* Run:<br>mkdir -pv /mnt/lfs<br>mount -v /dev/sdb /mnt/lfs<br>df /dev/sdb
+* Run:
 
 ```
-root:~# mkdir -pv /mnt/lfs
-
-mkdir: created directory '/mnt/lfs'
-
-root:~# mount -v /dev/sdb /mnt/lfs
-
-mount: /dev/sdb mounted on /mnt/lfs.
-
-root:~# df /dev/sdb
-
-Filesystem     1K-blocks  Used Available Use% Mounted on
-/dev/sdb        32716560    24  31022432   1% /mnt/lfs
-
-root:~# 
+mkfs -v -t ext4 /dev/sdb1
 
 ```
 
-[&#x213C;](#)<br id="idx013">
+<br>
+<img src="{{ site.baseurl }}/assets/images/do23-016.jpg" style="width:960px;"><br><br>
+
+
+[&#x213C;](#)<br id="idx017">
+## VirtualDisk Format /dev/sdb2
+
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+* Run:
+
+```
+mkfs -v -t ext4 /dev/sdb2
+
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/do23-017.jpg" style="width:960px;"><br><br>
+
+
+[&#x213C;](#)<br id="idx018">
+## Mounting /mnt/cbkadal and /mnt/lfs
+
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+  * Remember: <span style="color:red; font-weight:bold; font-size:larger;">you are not cbkadal!</span>
+* Run:
+
+```
+mkdir -pv /mnt/cbkadal
+mount -v  /dev/sdb1 /mnt/cbkadal
+mkdir -pv /mnt/lfs
+mount -v  /dev/sdb2 /mnt/lfs
+df        /dev/sdb[12]
+
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/do23-018.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx019">
 ## Add to file /etc/fstab
 
 * Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
 * Edit file "/etc/fstab" with your favorite editor, and add:
 
 ```
-/dev/sdb  /mnt/lfs ext4   defaults   1  1
+/dev/sdb1  /mnt/cbkadal ext4   defaults   1  1
+/dev/sdb2  /mnt/lfs     ext4   defaults   1  1
 
 ```
 
-[&#x213C;](#)<br id="idx014">
-## Check /etc/fstab (e.g.)
-
-
-```
-# <file system>                           <mount point>   <type>      <options>      <dump> <pass>
-UUID=12345678-abcd-ef12-3456-7890abcdef00 /               ext4        errors=remount-ro  0   1
-UUID=12345678-abcd-ef12-3456-7890abcdef01 none            swap        sw                 0   0
-/dev/sdb                                  /mnt/lfs        ext4        defaults           1   1
-
-```
+<br>
+<img src="{{ site.baseurl }}/assets/images/do23-019.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idxXXX"><br>
 
