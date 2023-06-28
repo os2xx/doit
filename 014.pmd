@@ -89,7 +89,7 @@ tagline: Debian Guest, Installation, VirtualBox
 ### Configure Locales
 
 * Australia: en_AU.UTF-8
-  * English + 24 Hours
+  * Australia is an English-speaking country with a 24-hour clock system.
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-047a.jpg" style="width:960px;"><br><br>
 
@@ -110,7 +110,7 @@ tagline: Debian Guest, Installation, VirtualBox
 ### Configure Network (e.g. cbkadal)
 
 * Hostname: cbkadal
-  * Remember: you are not cbkadal!
+  * Remember: <span style="color:red; font-weight:bold; font-size:larger;">you are not cbkadal!</span>
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-050.jpg" style="width:960px;"><br><br>
 
@@ -125,28 +125,28 @@ tagline: Debian Guest, Installation, VirtualBox
 ### Setup Users and Passwords (e.g. cbkadal)
 
 * ROOT password: cbkadal
-  * Remember: you are not cbkadal!
+  * Remember: <span style="color:red; font-weight:bold; font-size:larger;">you are not cbkadal!</span>
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-052.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx053">
 
 * New User Name: Cicak BinKadal
-  * Remember: you are not Cicak BinKadal!
+  * Remember: <span style="color:red; font-weight:bold; font-size:larger;">you are not Cicak BinKadal!</span>
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-053.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx054">
 
 * Username: cbkadal
-  * Remember: you are not cbkadal!
+  * Remember: <span style="color:red; font-weight:bold; font-size:larger;">you are not cbkadal!</span>
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-054.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx055">
 
 * Passwords (e.g. cbkadal)
-  * Remember: you are not cbkadal!
+  * Remember: <span style="color:red; font-weight:bold; font-size:larger;">you are not cbkadal!</span>
 
 <img src="{{ site.baseurl }}/assets/images/debVBOX-055.jpg" style="width:960px;"><br><br>
 
@@ -246,6 +246,8 @@ tagline: Debian Guest, Installation, VirtualBox
 
 ### Software Selection
 
+* Debian desktop environment: <span style="color:red; font-weight:bold; font-size:larger;">NO</span>
+* GNOME: <span style="color:red; font-weight:bold; font-size:larger;">NO</span>
 * SSH Server: YES
 * Standard System Utility: YES
 

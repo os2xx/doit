@@ -41,8 +41,8 @@ In that case, a download manager can help improve your download speed and stabil
 [&#x213C;](#)<br id="idx03">
 ## Intel (VMX) Virtualization Technology
 
-You may need to enable VMX (Virtual Machine Extensions). 
-Check your PC firmware configuration manual on how to do this.
+You may need to <span style="color:red; font-weight:bold; font-size:larger;">ENABLE</span>
+VMX (Virtual Machine Extensions).  Check your PC firmware configuration manual on how to do this.
 E.g.,
 
 * VMX ENABLED:
@@ -55,7 +55,8 @@ E.g.,
 [&#x213C;](#)<br id="idx04">
 ## Hyper-V
 
-You may need to disable Hyper-V on Microsoft Windows to install VirtualBox. 
+You may need to <span style="color:red; font-weight:bold; font-size:larger;">DISABLE</span>
+Hyper-V on Microsoft Windows to install VirtualBox.
 You can do this by running the following command in Admin PowerShell:
 
 ```
