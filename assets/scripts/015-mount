@@ -1,0 +1,6 @@
+# START: Thu 29 Jun 2023 09:00
+mkdir -pv /mnt/$(whoami)
+mount -v  /dev/sdb1 /mnt/$(whoami)
+mkdir -pv /mnt/lfs
+mount -v  /dev/sdb2 /mnt/lfs
+df        /dev/sdb[12]

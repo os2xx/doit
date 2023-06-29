@@ -9,7 +9,11 @@ tagline: VirtualBox, VirtualDisk
 ## Table of Content
 
 * [VirtualBox: Adding A 32 GB VirtualDisk](#idx001)
+  * [Storage Device Controller: SATA](#idx002)
+  * [Create Disk Image File](#idx003)
+  * [Virtual Hard Disk File Type](#idx004)
   * [DISK SIZE=32 GB](#idx006)
+  * [DONE](#idx009)
 * [Crosscheck /dev/sdb](#idx013)
 * [Partitioning 32GB](#idx014)
 * [Crosscheck Again /dev/sdb1 and /dev/sdb2](#idx015)
@@ -20,18 +24,26 @@ tagline: VirtualBox, VirtualDisk
 
 [&#x213C;](#)<br id="idx001">
 ## VirtualBox: Adding A 32 GB VirtualDisk
+<br>
 
 <img src="{{ site.baseurl }}/assets/images/do23-001.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx002">
+## Storage Device Controller: SATA
+<br>
 
 <img src="{{ site.baseurl }}/assets/images/do23-002.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx003">
+## Create Disk Image File
+<br>
 
 <img src="{{ site.baseurl }}/assets/images/do23-003.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx004">
+## Virtual Hard Disk File Type
+* VDI (VirtualBox Disk Image)
+<br>
 
 <img src="{{ site.baseurl }}/assets/images/do23-004.jpg" style="width:960px;"><br><br>
 
@@ -54,6 +66,8 @@ tagline: VirtualBox, VirtualDisk
 <img src="{{ site.baseurl }}/assets/images/do23-008.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx009">
+## Done
+<br>
 
 <img src="{{ site.baseurl }}/assets/images/do23-009.jpg" style="width:960px;"><br><br>
 
@@ -73,25 +87,16 @@ lsblk
 [&#x213C;](#)<br id="idx014">
 ## Partitioning 32GB
 
-| DEVICE    | TYPE | SIZE  |
-| --------- | ---- | ----- |
-| /dev/sdb1 | ext4 | 10 MB |
-| /dev/sdb2 | ext4 | reset |
+| DEVICE    | TYPE | SIZE     |
+| --------- | ---- | -------- |
+| /dev/sdb1 | ext4 | 10 MB    |
+| /dev/sdb2 | ext4 | the rest |
 
 
 ```
-sync
-dd if=/dev/zero of=/dev/sdb bs=1M count=1
-sync
-sfdisk /dev/sdb <<< "
-label: dos
-device: /dev/sdb
-unit: sectors
-sector-size: 512
-/dev/sdb1: type=83, start= 2048, size=20480
-/dev/sdb2: type=83, start=22528
-"
-
+{% raw %}
+(> assets/scripts/015-sfdisk <)
+{% endraw %}
 ```
 
 <br>
@@ -150,12 +155,9 @@ mkfs -v -t ext4 /dev/sdb2
 * Run:
 
 ```
-mkdir -pv /mnt/cbkadal
-mount -v  /dev/sdb1 /mnt/cbkadal
-mkdir -pv /mnt/lfs
-mount -v  /dev/sdb2 /mnt/lfs
-df        /dev/sdb[12]
-
+{% raw %}
+(> assets/scripts/015-mount <)
+{% endraw %}
 ```
 
 <br>
