@@ -19,8 +19,9 @@ tagline: VirtualBox, VirtualDisk
 * [Crosscheck Again /dev/sdb1 and /dev/sdb2](#idx015)
 * [VirtualDisk Format /dev/sdb1](#idx016)
 * [VirtualDisk Format /dev/sdb2](#idx017)
-* [Mounting /mnt/lfs](#idx018)
-* [Add to /etc/fstab](#idx019)
+* [Mounting /mnt/cbkadal](#idx018)
+* [Mounting /mnt/lfs](#idx019)
+* [Add to /etc/fstab](#idx020)
 
 [&#x213C;](#)<br id="idx001">
 ## VirtualBox: Adding A 32 GB VirtualDisk
@@ -146,24 +147,44 @@ mkfs -v -t ext4 /dev/sdb2
 <br>
 <img src="{{ site.baseurl }}/assets/images/do23-017.jpg" style="width:960px;"><br><br>
 
-
 [&#x213C;](#)<br id="idx018">
-## Mounting /mnt/cbkadal and /mnt/lfs
+## Mounting /mnt/cbkadal
 
 * Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
   * Remember: <span style="color:red; font-weight:bold; font-size:larger;">you are not cbkadal!</span>
+    Replace "cbkadal" with your account.
 * Run:
 
 ```
-{% raw %}
-(> assets/scripts/015-mount <)
-{% endraw %}
+mkdir -pv /mnt/cbkadal
+
+mount -v  /dev/sdb1 /mnt/cbkadal/
+
+df /dev/sdb1
+
 ```
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/do23-018.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx019">
+## Mounting /mnt/lfs
+
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+* Run:
+
+```
+mkdir -pv /mnt/lfs
+
+mount -v  /dev/sdb2 /mnt/lfs/
+
+df /dev/sdb2
+
+```
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospB-02.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx020">
 ## Add to file /etc/fstab
 
 * Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
