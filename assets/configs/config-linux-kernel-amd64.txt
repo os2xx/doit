@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 6.4.6 Kernel Configuration
+# Linux/x86 6.4.7 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (Debian 12.2.0-14) 12.2.0"
 CONFIG_CC_IS_GCC=y
@@ -30,7 +30,7 @@ CONFIG_INIT_ENV_ARG_LIMIT=32
 # CONFIG_COMPILE_TEST is not set
 # CONFIG_WERROR is not set
 # CONFIG_UAPI_HEADER_TEST is not set
-CONFIG_LOCALVERSION="-231vbox-43"
+CONFIG_LOCALVERSION="-231vbox-44"
 # CONFIG_LOCALVERSION_AUTO is not set
 CONFIG_BUILD_SALT=""
 CONFIG_HAVE_KERNEL_GZIP=y
