@@ -23,9 +23,10 @@ Installing VirtualBox on GNU/Linux and MacOS is slightly different.
 You can download the Debian ISO file from the official Debian website at the following URL:<br>
 <https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/>
 
-* The ISO image <span style="color:red; font-weight:bold; font-size:larger;">
-  is/was debian-12.0.0-amd64-netinst.iso
+* The ISO image <span style="color:red; font-weight:bold; font-size:larger;">is/was
+  "debian-12.1.0-amd64-netinst.iso"
   </span> --- but this is subject to change.
+* This example will use the previous version, "debian-12.0.0-amd64-netinst.iso"
 
 [&#x213C;](#)<br id="idx02">
 ## Download Manager
@@ -70,7 +71,7 @@ dism.exe /Online /Disable-Feature:Microsoft-Hyper-V
 * Download the latest version of VirtualBox for Windows from the Oracle website
   <https://www.virtualbox.org/wiki/Downloads/>
   * The VirtualBox version <span style="color:red; font-weight:bold; font-size:larger;">
-    is/was 7.0.8
+    is/was 7.0.10
     </span> --- but this is subject to change.
   * This example will use the previous version, "7.0.4".
 * Once the download is complete, run the installer file by double-clicking.
