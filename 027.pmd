@@ -21,11 +21,19 @@ tagline: ETC, Linux
 {% endraw %}
 ```
 
-[&#x213C;](#)<br id="idx01">
+[&#x213C;](#)<br id="idx02">
 
 ```
 {% raw %}
 (> assets/scripts/027-doZero <)
+{% endraw %}
+```
+
+[&#x213C;](#)<br id="idx03">
+
+```
+{% raw %}
+(> assets/scripts/027-doUPDATE <)
 {% endraw %}
 ```
 

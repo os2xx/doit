@@ -1,0 +1,17 @@
+cat > $HOME/.doUPDATE.sh << EOF
+#!/bin/bash
+# REV01: Wed 16 Aug 2023 07:30
+# START: Wed 16 Aug 2023 07:00
+# .doUPDATE.sh
+
+time (
+  aptitude update          &&
+  echo " ===== 1 ====== "  &&
+  aptitude safe-upgrade -y &&
+  echo " ===== 2 ====== "  &&
+  aptitude autoclean -y;
+)
+
+exit
+EOF
+### #####
