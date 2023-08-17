@@ -1,4 +1,4 @@
-# REV21: Thu 22 Jun 2023 18:00
+# REV22: Wed 16 Aug 2023 08:00
 # REV19: Tue 21 Feb 2023 20:00
 # REV09: Fri 27 Jan 2023 10:00
 # REV03: Thu 14 Jul 2022 07:00
@@ -36,6 +36,10 @@ all: $(MD_FILES) .siteHack
 
 011.md: 011.pmd assets/configs/config-linux-kernel-arm64.txt
 	python assets/scripts/includeScript.py < 011.pmd > 011.md
+
+026.md: assets/scripts/026-deb01 \
+        assets/scripts/026-deb02
+	python assets/scripts/includeScript.py < 026.pmd > 026.md
 
 027.md: assets/scripts/027-doBASH assets/scripts/027-doDNS assets/scripts/027-doZero \
         assets/scripts/027-doUPDATE

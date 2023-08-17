@@ -1,9 +1,17 @@
 cat > $HOME/.doDNS.sh << EOF
 #!/bin/bash
+# REV03: Wed 16 Aug 2023 09:30
 # REV02: Tue 27 Jun 2023 16:00
 # START: Fri 16 Jun 2023 16:00
 # .doDNS.sh
 
-cat > /etc/resolv.conf <<< "nameserver 8.8.8.8"
-exit
+RESOLV="/etc/resolv.conf"
+
+echo   "===== \$RESOLV was:"
+cat    \$RESOLV
+cat >  \$RESOLV <<< "nameserver 8.8.8.8"
+cat >> \$RESOLV <<< "nameserver 8.8.4.4"
+echo   "===== \$RESOLV now:"
+cat    \$RESOLV
 EOF
+
