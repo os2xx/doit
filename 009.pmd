@@ -9,8 +9,13 @@ tagline: M1, Apple, Mac, UTM, Install Debian
 ## Table of Content
 * [Debian ISO Image](#idx000-1)
 * [UTM for MacOS Apple Silicon](#idx000-2)
-* [Installing UTM](#idx000-3)
-* [New Virtual Machine](#idx001)
+  * [Installing UTM](#idx000-3)
+  * [New Virtual Machine](#idx001)
+  * [Hardware](#idx005)
+  * [Storage](#idx006)
+  * [Shared Directory](#idx007)
+  * [Summary](#idx008)
+* [Fine tuning a Virtual Guest](#idx009)
 
 [&#x213C;](#)<br id="idx000-1">
 ## Debian ISO Image
@@ -36,7 +41,7 @@ Download the latest version of UTM for MacOS Apple Silicon from:
 
 [&#x213C;](#)<br id="idx000-3">
 
-## Installing UTM
+### Installing UTM
 
 Install "UTM.dmg" by placing "UTM" into the "Application" folder.
 
@@ -50,7 +55,7 @@ In this example, the UTM version is 4.5.3 (5 Aug 2023)
 
 [&#x213C;](#)<br id="idx001">
 
-## New Virtual Machine
+### New Virtual Machine
 
 * Click "Create a New Virtual Machine"
 
@@ -58,35 +63,74 @@ In this example, the UTM version is 4.5.3 (5 Aug 2023)
 
 [&#x213C;](#)<br id="idx002">
 
-* Select: "Other"
+* Start, select: "Virtualize"
 
 <img src="{{ site.baseurl }}/assets/images/debM1-002.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx003">
 
+* Operating System, select: "Other"
+
 <img src="{{ site.baseurl }}/assets/images/debM1-003.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx004">
 
+* Other, select: "Browse"
+
 <img src="{{ site.baseurl }}/assets/images/debM1-004.jpg" style="width:960px;"><br><br>
 
+* Open the Debian ISO image
+  * This example will use the version "debian-12.1.0-arm64-netinst.iso"
+
+<img src="{{ site.baseurl }}/assets/images/debM1-004-1.jpg" style="width:960px;"><br><br>
+
+* Continue
+
+<img src="{{ site.baseurl }}/assets/images/debM1-004-2.jpg" style="width:960px;"><br><br>
+
 [&#x213C;](#)<br id="idx005">
+
+### Hardware
+
+* Memory: 4096 MB
+  * Or more, if available.
+* CPU Cores: default
 
 <img src="{{ site.baseurl }}/assets/images/debM1-005.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx006">
 
+### Storage
+
+* Size: 24 GB
+
 <img src="{{ site.baseurl }}/assets/images/debM1-006.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx007">
+
+### Shared Directory
+
+* Continue
 
 <img src="{{ site.baseurl }}/assets/images/debM1-007.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx008">
 
+### Summary
+
+* Name (e.g.): UDEB-00-BLANK
+  * You might apply alternate names.
+* Save
+
 <img src="{{ site.baseurl }}/assets/images/debM1-008.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx009">
+
+## Fine tuning a Virtual Machine (VM)
+
+* Edit Selected VM
+  * Select VM: UDEB-00-BLANK (left)
+  * Clink: Top Right Corner 
 
 <img src="{{ site.baseurl }}/assets/images/debM1-009.jpg" style="width:960px;"><br><br>
 
