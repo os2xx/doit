@@ -37,11 +37,11 @@ all: $(MD_FILES) .siteHack
 011.md: 011.pmd assets/configs/config-linux-kernel-arm64.txt
 	python assets/scripts/includeScript.py < 011.pmd > 011.md
 
-026.md: assets/scripts/026-deb01 \
+026.md: 026.pmd assets/scripts/026-deb01 \
         assets/scripts/026-deb02
 	python assets/scripts/includeScript.py < 026.pmd > 026.md
 
-027.md: assets/scripts/027-doBASH assets/scripts/027-doDNS assets/scripts/027-doZero \
+027.md: 027.pmd assets/scripts/027-doBASH assets/scripts/027-doDNS assets/scripts/027-doZero \
         assets/scripts/027-doUPDATE
 	python assets/scripts/includeScript.py < 027.pmd > 027.md
 
