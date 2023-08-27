@@ -26,8 +26,20 @@ tagline: M1, Apple, Mac, UTM, Install Debian
   * [Network: Port Forward](#idx017)
   * [Sound](#idx018A)
 <br id="idx018B">
-* [BACKUP](#idx019)
-* [Installing Debian](#idx027)
+* [Maintenance](#idx019)
+  * [BACKUP](#idx019)
+  * [CLONE](#idx023)
+  * [REMOVE SHORTCUT TO UTM](#idx024)
+  * [EDIT/RENAME](#idx025)
+* [Installing Debian](#idx027A)
+  * [Re-Attach ISO Image](#idx027A)
+  * [START Install](#idx027)
+  * [Debian Installer Menu](#idx029)
+  * [Select A Language](#idx030)
+  * [Select Your Location](#idx032)
+  * [Configure Locales](#idx035)
+  * [Configure Keyboard](#idx036)
+  * [Configure Network (e.g. cbkadal)](#idx038)
 * [Boot dan Shutdown Test](#idx059)
 
 [&#x213C;](#)<br id="idx000-1">
@@ -243,7 +255,8 @@ In this example, the UTM version is 4.5.3 (5 Aug 2023)
 
 [&#x213C;](#)<br id="idx019">
 
-## BACKUP
+## Maintenance
+### BACKUP
 
 Backup to another folder (e.g. UTM/)
 
@@ -257,68 +270,153 @@ Backup to another folder (e.g. UTM/)
 
 [&#x213C;](#)<br id="idx021">
 
+* CONFIRM
+
 <img src="{{ site.baseurl }}/assets/images/debM1-021.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx022">
 
+* SAVE to folder UTM
+
 <img src="{{ site.baseurl }}/assets/images/debM1-022.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx022A">
+
+* New Backup Copy "UDEB-00-BLANK.utm" in folder UTM.
+
+<img src="{{ site.baseurl }}/assets/images/debM1-022A.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx023">
 
+## CLONE
+
+How to clone a Virtual Machine (Guest)
+
 <img src="{{ site.baseurl }}/assets/images/debM1-023.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx023A">
+
+* Confirm Duplication: YES
+
+<img src="{{ site.baseurl }}/assets/images/debM1-023A.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx024">
 
+## REMOVE SHORTCUT TO UTM
+
+After cloning, you might remove the shortcut.
+
 <img src="{{ site.baseurl }}/assets/images/debM1-024.jpg" style="width:960px;"><br><br>
 
+[&#x213C;](#)<br id="idx024A">
+
+* Confirm: REMOVE shortcut
+
+<img src="{{ site.baseurl }}/assets/images/debM1-024A.jpg" style="width:960px;"><br><br>
+
 [&#x213C;](#)<br id="idx025">
+
+## EDIT/RENAME 
+
+* Option EDIT: Rename "UDEB-00-BLANK" to "UDEB-00-INSTALL"
 
 <img src="{{ site.baseurl }}/assets/images/debM1-025.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx026">
 
+* Information
+  * Name: UDEB-00-INSTALL
+  * Icon: Debian Icon + Operating System
+  * SAVE
+
 <img src="{{ site.baseurl }}/assets/images/debM1-026.jpg" style="width:960px;"><br><br>
 
-[&#x213C;](#)<br id="idx027">
+[&#x213C;](#)<br id="idx027A">
 
 ## Installing Debian
 
+### Re-Attach ISO Image]
+
+The ISO Image has to be re-attached after cloning.
+* Browse ISO Image
+
+<img src="{{ site.baseurl }}/assets/images/debM1-027A.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx027B">
+
+* The ISO image was "debian-12.1.0-arm64-netinst.iso" — but this is subject to change.
+* This example will use the (previous version,) "debian-12.1.0-arm64-netinst.iso"
+
+<img src="{{ site.baseurl }}/assets/images/debM1-027B.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx027">
+
+### START Install
+
+* CLICK to START
 
 <img src="{{ site.baseurl }}/assets/images/debM1-027.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx028">
 
+Start BOOT Option
+
 <img src="{{ site.baseurl }}/assets/images/debM1-028.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx029">
+
+### Debian Installer Menu
+
+* Graphical Install
 
 <img src="{{ site.baseurl }}/assets/images/debM1-029.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx030">
 
+### Select A Language
+
+* English
+  * (or else) 
+
 <img src="{{ site.baseurl }}/assets/images/debM1-030.jpg" style="width:960px;"><br><br>
 
-[&#x213C;](#)<br id="idx031">
-
-<img src="{{ site.baseurl }}/assets/images/debM1-031.jpg" style="width:960px;"><br><br>
-
 [&#x213C;](#)<br id="idx032">
+
+### Select Your Location
+
+* Other 
+  * (or else) 
 
 <img src="{{ site.baseurl }}/assets/images/debM1-032.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx033">
 
+* Asia
+  * (or else)
+
 <img src="{{ site.baseurl }}/assets/images/debM1-033.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx034">
+
+* Indonesia 
+  * (or else)
 
 <img src="{{ site.baseurl }}/assets/images/debM1-034.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx035">
 
+### Configure Locales
+
+* Australia: en_AU.UTF-8
+  * Australia is an English-speaking country with a 24-hour clock system.
+
 <img src="{{ site.baseurl }}/assets/images/debM1-035.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx036">
+
+### Configure Keyboard
+
+* American English
 
 <img src="{{ site.baseurl }}/assets/images/debM1-036.jpg" style="width:960px;"><br><br>
 
@@ -328,9 +426,15 @@ Backup to another folder (e.g. UTM/)
 
 [&#x213C;](#)<br id="idx038">
 
+### Configure Network (e.g. cbkadal)
+* Hostname: cbkadal
+  * Remember: <span style="color:red; font-weight:bold; font-size:larger;">you are not cbkadal!</span>
+
 <img src="{{ site.baseurl }}/assets/images/debM1-038.jpg" style="width:960px;"><br><br>
 
 [&#x213C;](#)<br id="idx039">
+
+* Domain Name: BLANK
 
 <img src="{{ site.baseurl }}/assets/images/debM1-039.jpg" style="width:960px;"><br><br>
 
