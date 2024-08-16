@@ -1,0 +1,226 @@
+---
+title:  "VirtualBox: Adding A 32 GB VirtualDisk"
+description:
+  VirtualBox: Adding A 32 GB VirtualDisk
+tagline: VirtualBox, VirtualDisk
+---
+
+[&#x213C;](#idxXXX)<br id="idx000">
+## Table of Content
+
+* [VirtualBox: Adding A 32 GB VirtualDisk](#idx001)
+  * [Storage Device Controller: SATA](#idx002)
+  * [Create Disk Image File](#idx003)
+  * [Virtual Hard Disk File Type](#idx004)
+  * [DISK SIZE=32 GB](#idx006)
+  * [DONE](#idx009)
+* [Crosscheck /dev/sdb](#idx013)
+* [Partitioning 32GB](#idx014)
+* [Crosscheck Again /dev/sdb1 and /dev/sdb2](#idx015)
+* [VirtualDisk Format /dev/sdb1](#idx016)
+* [VirtualDisk Format /dev/sdb2](#idx017)
+* [Mounting /mnt/cbkadal](#idx018)
+* [Mounting /mnt/lfs](#idx019)
+* [Add to /etc/fstab](#idx020)
+* [UUID](#idx021)
+
+[&#x213C;](#)<br id="idx001">
+## VirtualBox: Adding A 32 GB VirtualDisk
+<br>
+
+<img src="{{ site.baseurl }}/assets/images/do23-001.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx002">
+## Storage Device Controller: SATA
+<br>
+
+<img src="{{ site.baseurl }}/assets/images/do23-002.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx003">
+## Create Disk Image File
+<br>
+
+<img src="{{ site.baseurl }}/assets/images/do23-003.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx004">
+## Virtual Hard Disk File Type
+* VDI (VirtualBox Disk Image)
+<br>
+
+<img src="{{ site.baseurl }}/assets/images/do23-004.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx005">
+
+<img src="{{ site.baseurl }}/assets/images/do23-005.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx006">
+
+* DISK SIZE: 32 GB
+
+<img src="{{ site.baseurl }}/assets/images/do23-006.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx007">
+
+<img src="{{ site.baseurl }}/assets/images/do23-007.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx008">
+
+<img src="{{ site.baseurl }}/assets/images/do23-008.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx009">
+## Done
+<br>
+
+<img src="{{ site.baseurl }}/assets/images/do23-009.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx013">
+## Crosscheck /dev/sdb
+
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+* Run:
+
+```
+lsblk
+
+```
+
+<img src="{{ site.baseurl }}/assets/images/do23-013.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx014">
+## Partitioning 32GB
+
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+* Run:
+
+| DEVICE    | TYPE | SIZE     |
+| --------- | ---- | -------- |
+| /dev/sdb1 | ext4 | 10 MB    |
+| /dev/sdb2 | ext4 | the rest |
+
+
+```
+{% raw %}
+(> assets/scripts/015-sfdisk <)
+{% endraw %}
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/do23-014.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx015">
+## Crosscheck Again /dev/sdb1 and /dev/sdb2
+
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+* Run:
+
+```
+lsblk
+
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/do23-015.jpg" style="width:960px;"><br><br>
+
+
+[&#x213C;](#)<br id="idx016">
+## VirtualDisk Format /dev/sdb1
+
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+* Run:
+
+```
+mkfs -v -t ext4 /dev/sdb1
+
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/do23-016.jpg" style="width:960px;"><br><br>
+
+
+[&#x213C;](#)<br id="idx017">
+## VirtualDisk Format /dev/sdb2
+
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+* Run:
+
+```
+mkfs -v -t ext4 /dev/sdb2
+
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/do23-017.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx018">
+## Mounting /mnt/cbkadal
+
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+  * Remember: <span style="color:red; font-weight:bold; font-size:larger;">you are not cbkadal!</span>
+    Replace "cbkadal" with your account.
+* Run:
+
+```
+mkdir -pv /mnt/cbkadal
+
+mount -v  /dev/sdb1 /mnt/cbkadal/
+
+df /dev/sdb1
+
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/do23-018.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx019">
+## Mounting /mnt/lfs
+
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+* Run:
+
+```
+mkdir -pv /mnt/lfs
+
+mount -v  /dev/sdb2 /mnt/lfs/
+
+df /dev/sdb2
+
+```
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospB-02.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx020">
+## Add to file /etc/fstab
+
+* Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
+* Edit file "/etc/fstab" with your favorite editor, and add:
+
+```
+/dev/sdb1  /mnt/cbkadal ext4   defaults   0  2
+/dev/sdb2  /mnt/lfs     ext4   defaults   0  3
+
+```
+
+* Remember: <span style="color:red; font-weight:bold; font-size:larger;">you are not cbkadal!</span>
+  Replace "cbkadal" with your account.
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/do23-019.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx021">
+## UUID
+
+In file "/etc/fstab"; replace "/dev/sdb1" and "/dev/sdb2" with its UUID. To find out UUID, run (root):
+
+```
+blkid
+
+```
+
+After replacement, file "/etc/fstab" should look like:
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/do23-019X.jpg" style="width:960px;"><br><br>
+
+
+[&#x213C;](#)<br id="idxXXX"><br>
+

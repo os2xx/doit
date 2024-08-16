@@ -1,0 +1,12 @@
+cat > $HOME/.doBASH.sh << EOF
+#!/bin/bash
+# REV02: Tue 27 Jun 2023 15:00
+# START: Fri 16 Jun 2023 16:00
+# .doBASH.sh
+
+readlink -- /bin/sh
+[[ "$(readlink -- /bin/sh)" == "/bin/bash" ]] || { /bin/rm -f /bin/sh; ln -s /bin/bash /bin/sh; }
+readlink -- /bin/sh
+exit
+EOF
+### #####

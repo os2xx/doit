@@ -1,0 +1,33 @@
+---
+title:  HOSTNAME
+description:
+  How to rename yout host
+tagline: HOSTNAME
+---
+
+[&#x213C;](#idxXXX)<br id="idx00">
+
+## HOSTNAME
+
+* E.g. changing hostname to "Coba"
+  (account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>)
+
+```
+hostname
+
+
+hostnamectl set-hostname Coba
+
+
+hostname
+
+
+hostnamectl
+
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-29.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idxXXX">

@@ -1,0 +1,89 @@
+---
+title:  Installing Debian Packages
+description:
+  Debian Packages List
+tagline: Deb, Packages
+---
+
+[&#x213C;](#idxXXX)<br id="idx00">
+
+## List of Contents
+* [Debian Packages: Basic](#idx01)
+* [Debian Packages: Compiling Kernel](#idx02)
+* [Debian Packages: OS](#idx03)
+* [Debian Packages: OS Additional](#idx05)
+
+[&#x213C;](#)<br id="idx01">
+
+## Debian Packages: Basic
+
+Basic packages are always required. Copy-paste the following 
+(account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>).
+
+```
+{% raw %}
+(> assets/scripts/026-debBasic <)
+{% endraw %}
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-32.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idx02">
+
+## Debian Packages: Compiling Kernel
+
+Packages list for compiling the Linux Kernel. Copy-paste the following 
+(account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>).
+
+```
+{% raw %}
+(> assets/scripts/026-debCompile <)
+{% endraw %}
+```
+
+[&#x213C;](#)<br id="idx03">
+
+## Debian Packages: OSP
+
+Packages list for Operating Systems and System Programming. Copy-paste the following 
+(account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>).
+
+```
+{% raw %}
+(> assets/scripts/026-debOSP <)
+{% endraw %}
+```
+
+[&#x213C;](#)<br id="idx04">
+
+<img src="{{ site.baseurl }}/assets/images/dospE-06.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idx05">
+
+## Debian Packages: OS Additional
+
+Additional packages list. Copy-paste the following 
+(account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>).
+
+```
+{% raw %}
+(> assets/scripts/026-debOSPADD <)
+{% endraw %}
+```
+
+[&#x213C;](#)<br id="idx06">
+## Debian Packages: Ruby + Jekyll
+Copy-paste the following 
+(account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>).
+
+```
+{% raw %}
+(> assets/scripts/026-debJEKYLL <)
+{% endraw %}
+```
+
+[&#x213C;](#)<br id="idxXXX">
+

@@ -1,0 +1,7 @@
+#!/bin/bash
+# REV01: Wed 03 Jan 2024 10:00
+# START: Thu 08 Jul 2021 10:00
+
+echo -n "XYZZY.."
+echo ". Nothing happens..."
+

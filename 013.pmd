@@ -1,0 +1,322 @@
+---
+title:  "Debian Guest Preparation"
+description:
+  Debian Guest Preparation
+tagline: Install Debian, VirtualBox, Preparation
+---
+
+[&#x213C;](#idxXXX)<br id="idx000">
+## Table of Content
+
+* [Installing Debian Gnu/Linux](#idx009)
+* [Export OVA (DEB00-0)](#idx015)
+* [Rename DEB00-0 to DEB00-1](#idx016)
+* [Fine Tunning](#idx018)
+  * [General:Basic](#idx019)
+  * [General:Advanced](#idx020)
+  * [System:MotherBoard](#idx021)
+  * [System:Processor](#idx022)
+  * [System:Acceleration](#idx023)
+  * [Display:Screen](#idx024)
+  * [Storage:Devices:Controller:IDE](#idx025)
+  * [Storage:Devices:Controller:SATA](#idx026)
+  * [Audio](#idx032)
+  * [Network:Adapter 1](#idx033)
+* [DONE](#idx035)
+* [Export OVA (DEB00-1)](#idx036)
+
+[&#x213C;](#)<br id="idx009">
+## Installing Debian Gnu/Linux
+
+<span style="color:red; font-weight:bold; font-size:larger;">NOTE:</span>
+When doing the installation, most of the options are 
+<span style="color:red; font-weight:bold; font-size:larger;">DEFAULT</span>. 
+Possible different answers will be marked with 
+"<span style="color:red; font-weight:bold; font-size:larger;">ARROWS</span>."
+If you are in "Guided Mode," switch to 
+"<span style="color:red; font-weight:bold; font-size:larger;">Expert Mode</span>."
+
+These are just examples, the whole examples, and nothing but examples. So please help me, GNU/Linux!
+You might select other options based on your faith and religion 
+(i.e., kepercayaan and keyakinan masing-masing).
+
+* Name: DEB00-0
+* Type: Linux
+* Version: Debian (64 bit)
+* Base Memory: 4096 MB
+* Processors: 4
+* HardDisk
+  * Size: 24 GB
+  * Type: VDI
+
+### Expect the Unexpected
+
+* Sh*t sometimes happens!
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-009.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx010">
+## Select: NEW
+
+<span style="color:red; font-weight:bold; font-size:larger;">NOTE:</span>
+When doing the installation, most of the options are 
+<span style="color:red; font-weight:bold; font-size:larger;">DEFAULT</span>. 
+Possible different answers will be marked with 
+"<span style="color:red; font-weight:bold; font-size:larger;">ARROWS</span>."
+If you are in "Guided Mode," switch to
+"<span style="color:red; font-weight:bold; font-size:larger;">Expert Mode</span>."
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-010.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx011">
+
+### Virtual Machine Name and Operating Systems
+
+<span style="color:red; font-weight:bold; font-size:larger;">NOTE:</span>
+When doing the installation, most of the options are 
+<span style="color:red; font-weight:bold; font-size:larger;">DEFAULT</span>. 
+Possible different answers will be marked with 
+"<span style="color:red; font-weight:bold; font-size:larger;">ARROWS</span>."
+If you are in "Guided Mode," switch to
+"<span style="color:red; font-weight:bold; font-size:larger;">Expert Mode</span>."
+
+* Select: Expert Mode
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-011.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx012">
+
+* Name: DEB00-0
+* Type: Linux
+* Version: Debian (64 bit)
+* <span style="color:red; font-weight:bold; font-size:larger;">ATTN: If your Windows "C:" 
+  drive is almost full, consider to switch the "Folder" to drive "D:".</span>
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-012.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx013">
+
+### Hardware
+
+<span style="color:red; font-weight:bold; font-size:larger;">NOTE:</span>
+When doing the installation, most of the options are 
+<span style="color:red; font-weight:bold; font-size:larger;">DEFAULT</span>. 
+Possible different answers will be marked with 
+"<span style="color:red; font-weight:bold; font-size:larger;">ARROWS</span>."
+If you are in "Guided Mode," switch to
+"<span style="color:red; font-weight:bold; font-size:larger;">Expert Mode</span>."
+
+* Base Memory: 4096 MB
+  * "<span style="color:red; font-weight:bold; font-size:larger;">Make sure that you don't cross the red line!</span>"
+* Processors: 4
+  * "<span style="color:red; font-weight:bold; font-size:larger;">Make sure that you don't cross the red line!</span>"
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-013.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx014">
+
+### HardDisk
+
+Do not worry about having a 24 GB empty disk! An empty disk does not occupy much space.
+
+  * Size: 24 GB
+  * Type: VDI
+
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-014.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx015">
+
+## Export OVA: DEB00-0
+
+* Select: 
+  * Tools --> Export
+  * FINISH
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-015.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx016">
+
+## Rename DEB00-0 to DEB00-1
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-016.jpg" style="width:960px;"><br><br>
+
+* In "General", click "Name:DEB00-0"
+* Set "Name:DEB00-1"
+* OK
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-017.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx018">
+## Fine Tunning
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-018.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx019">
+
+### General: Basic
+
+* Name: DEB00-1
+* Type: Linux
+* Version: Debian 12 Bookworm (64-bit)
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-019.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx020">
+
+### General: Advanced
+
+* Shared ClipBoard: Bi-directional
+* Drag'n Drop: Bi-directional
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-020.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx021">
+
+### System: MotherBoard
+
+* Base Memory: 4096 MB
+* Boot Order:
+  * Optical
+  * HardDisk
+* ChipSet: PIIX3
+* TPM: None
+* Pointing Device: USB Tablet
+* Extended Feature: 
+  * Enable I/O APIC
+  * Enable Hardware Clock in UTC Time
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-021.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx022">
+
+### System: Processor
+
+* Processors: 4
+* Execution Caps: 100%
+* Extended Feature: 
+  * Enable PAE/NX
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-022.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx023">
+
+### System: Acceleration
+
+* Paravirtualization Interface: Default
+* Hardware Virtualization: Enable Nesting Page
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-023.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx024">
+
+### Display: Screen
+
+* Video Memory: 16MB
+* Monitor Count: 1
+* Scale Factor: 150%
+  * Change "Scale Factor" to 100% if the console is too large, or 200% if it is too small.
+* Graphics Controller: VMSVGA
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-024.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx025">
+
+### Storage: Devices: Controller: IDE
+
+* REMOVE IDE CONTROLLER: (RIGHT CLICK)
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-025.jpg" style="width:960px;"><br><br>
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-026.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx026">
+
+### Storage: Devices: Controller: SATA
+
+* Add Optical Drive
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-027.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx028">
+
+* Add ISO Disk Image File
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-028.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx029">
+
+You can download the Debian ISO file from the official Debian website at the following URL:<br>
+<https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/>{:target="_blank"}
+
+* The current ISO image <span style="color:red; font-weight:bold; font-size:larger;">is/was
+  "debian-12.6.0-amd64-netinst.iso"
+  </span> --- but this is subject to change.
+* This example will use the previous version, "debian-12.0.0-amd64-netinst.iso"
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-029.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx030">
+
+* Choose ISO Image
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-030.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx030">
+
+* Done
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-031.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx032">
+
+### AUDIO
+* Audio: OFF
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-032.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx033">
+
+### Network: Adapter 1
+
+* Enable Network Adapter
+  * Attachet to: NAT
+  * Advanced:
+    * Adapter Type: Intel Pro/1000 MT Desktop
+    * Cable Connected: Checked
+    * Port Forwarding (CLICK)
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-033.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx034">
+
+### Port Forwarding Rules (SSH)
+
+| Name   | Protocol | Host IP   | Host Port | Guest IP  | Guest Port |
+| Rule 1 | TCP      | 127.0.0.1 | 6022      | 10.0.2.15 | 22         |
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-034.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx035">
+
+## DONE (OK)
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-035.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx036">
+
+## EXPORT: DEB00-1
+
+* TOOLS (CLICK)
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-036.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx037">
+
+* If you are in "Guided Mode," switch to "Expert Mode."
+* Virtual Machine: DEB00-1
+
+<img src="{{ site.baseurl }}/assets/images/debVBOX-037.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idxXXX"><br>
+

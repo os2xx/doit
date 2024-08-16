@@ -1,0 +1,39 @@
+version:          "0188a--16-Aug-2024"
+copyright:        "2021-2024"
+title:            "This Is How Me Do It!"
+author:           "C. BinKadal"
+address:          "Sendirian, Berhad"
+description:
+  This Is How Me Do It!
+  This Is How Me Do It!
+disclaimer:
+  I have spoken.
+keywords:         "jekyll, testing"
+navbarlinks:
+- navbar:         "Home"
+  link:           "/"
+- navbar:         "GitHub"
+  link:           "https://github.com/yforku/doit/"
+- navbar:         "Listing"
+  link:           "/004.html"
+- navbar:         "About"
+  link:           "/ABOUT/"
+- navbar:         "GitHub Page"
+  link:           "https://doit.vlsm.org/"
+lang:             "en-US"
+sitemap:          "true"
+markdown:         "kramdown"
+defaults:
+- scope:
+    path:         ""
+  values:
+    layout:       "default"
+github:
+- metadata
+plugins:
+- jekyll-sitemap
+- jekyll-seo-tag
+google_analytics: "G-FTZLNT0SCC"
+urlweb:           "https://doit.vlsm.org/"
+urlcontact:       "TBA"
+urlgithub:        "https://github.com/yforku/doit/"

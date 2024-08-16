@@ -1,0 +1,26 @@
+---
+title:  ROOT .vimrc and .profile
+description:
+  Setting the .vimrc and .profile
+tagline: root, .profile, .vimrc
+---
+
+[&#x213C;](#idxXXX)<br id="idx00">
+
+## ROOT .vimrc and .profile
+
+* .vimrc is the vi(m) configuration file.
+* .profile is the bash profile.
+
+```
+{% raw %}
+(> assets/scripts/025-root.profile <)
+{% endraw %}
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-31.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idxXXX">
+

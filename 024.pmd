@@ -1,0 +1,26 @@
+---
+title:  USER .vimrc and .bash_aliases
+description:
+  Setting .vimrc and .bash_aliases
+tagline: .vimrc, .bash_aliaes
+---
+
+[&#x213C;](#idxXXX)<br id="idx00">
+
+## USER .vimrc and .bash_aliases
+
+* .vimrc is the vi(m) configuration file.
+* .bash_aliases configures aliases.
+
+```
+{% raw %}
+(> assets/scripts/024-user.bash_aliases <)
+{% endraw %}
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-30.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idxXXX">
+

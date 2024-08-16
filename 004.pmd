@@ -1,0 +1,101 @@
+---
+title:  "A GitHub Page with no Jekyll Theme"
+description:
+   This page is about building a GitHub Page with no Jekyll theme.
+   It is assumed that you know and have a GitHub account,
+   and know how to setup a GitHub Page.
+tagline:
+   GitHub Page, Jekyll
+---
+
+<hr>
+{% include inc001.html %}
+<hr>
+
+This page is about building a GitHub Page with no [Jekyll theme](https://jekyllrb.com/docs/themes/).
+It is assumed that you know and have a [GitHub](https://github.com/) account, and know how to setup
+a [GitHub Page](https://pages.github.com/).
+
+<br>
+## GitHub Page Configuration Files
+
+* Files inside repo <https://github.com/os2xx/doit/>:
+
+<br>
+### Makefile
+
+```
+(> Makefile <)
+```
+
+<br>
+### _config.yml
+
+```
+(> _config.yml <)
+```
+
+<br>
+### Gemfile
+
+```
+(> Gemfile <)
+```
+
+<br>
+### _layouts/default.html
+
+```
+{% raw %}
+(> _layouts/default.html <)
+{% endraw %}
+```
+
+<br>
+### _includes/head.html
+
+```
+{% raw %}
+(> _includes/head.html <)
+{% endraw %}
+```
+
+<br>
+### _includes/navbar.html
+
+```
+{% raw %}
+(> _includes/navbar.html <)
+{% endraw %}
+```
+
+<br>
+### assets/css/style.css
+
+```
+(> assets/css/style.css <)
+```
+
+<br>
+### _includes/google-analytics.html
+
+```
+{% raw %}
+(> _includes/google-analytics.html <)
+{% endraw %}
+```
+
+<br>
+### assets/scripts/includeScript.py 
+
+```
+(> assets/scripts/includeScript.py <)
+```
+
+<hr>
+
+{% include inc001.html %}
+
+
+[NEXT: Using your own domain name (eg. doit.vlsm.org)](002.md)
+

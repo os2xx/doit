@@ -1,0 +1,73 @@
+---
+title:  SCP
+description:
+  How to SCP
+tagline: SCP
+---
+
+[&#x213C;](#idxXXX)<br id="idx00">
+
+## List of Contents
+* [scp from Windows](#idx01)
+* [scp to Windows](#idx02)
+
+[&#x213C;](#)<br id="idx01">
+
+## scp from Windows
+
+* E.g., user: cbkadal
+  * Remember: <span style="color:red; font-weight:bold; font-size:larger;">you are not cbkadal!</span>
+
+```
+(((type nul 2> nul > file1.txt)>file2.txt)>file3.txt)>file4.txt;cmd /r dir/w
+
+scp -P 6022 .\file?.txt cbkadal@localhost:/tmp/
+
+ssh -p 6022 cbkadal@localhost
+
+ls -F /tmp/file*
+
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-21.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idx02">
+
+## scp to Windows
+
+* E.g., user: cbkadal
+  * Remember: <span style="color:red; font-weight:bold; font-size:larger;">you are not cbkadal!</span>
+
+### GUEST
+```
+mkdir -pv tmp
+
+cd tmp
+
+mv -v /tmp/file* .
+
+ls -F
+
+exit
+
+```
+
+### WINDOWS
+
+```
+del .\file*
+
+scp -P 6022  "cbkadal@localhost:~/tmp/file?.txt" .
+
+cmd /r dir /w
+
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-22.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idxXXX">
+

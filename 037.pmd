@@ -1,0 +1,55 @@
+---
+title:  "Installing Debian (ISO) on MacOS (Silicon)"
+description:
+  Installing UTM and Debian (ISO) on MacOS (Silicon)
+tagline: Apple Silicon, Mac, UTM, Install Debian ISO
+---
+
+[&#x213C;](#idxXXX)<br id="idx000">
+## Table of Content
+* [Debian ISO Image](#idx000-1)
+* [UTM for MacOS Apple Silicon](#idx000-2)
+* [Installing UTM](#idx000-3)
+
+[&#x213C;](#)<br id="idx000-1">
+## Debian ISO Image
+
+You can download the Debian ISO file from the official Debian website at the following URL:<br>
+<https://cdimage.debian.org/debian-cd/current/arm64/iso-cd/>{:target="_blank"}
+
+* The ISO image is/was <span style="color:red; font-weight:bold; font-size:larger;">
+  "debian-12.6.0-arm64-netinst.iso"
+  </span> --- but this is subject to change.
+  * This example will use the previous version, "debian-12.1.0-arm64-netinst.iso"
+
+<img src="{{ site.baseurl }}/assets/images/debM1-000-1.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx000-2">
+
+## UTM for MacOS Apple Silicon
+
+Download the latest version of UTM for MacOS Apple Silicon from:
+<https://mac.getutm.app/>{:target="_blank"}
+
+<img src="{{ site.baseurl }}/assets/images/debM1-000-2.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx000-3">
+
+## Installing UTM
+
+Install "UTM.dmg" by placing "UTM" into the "Application" folder.
+
+<img src="{{ site.baseurl }}/assets/images/debM1-000-3.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idx000-4">
+
+* The UTM version is/was <span style="color:red; font-weight:bold; font-size:larger;">
+  "4.5.3"
+  </span> --- but this is subject to change.
+  * The following example use version "4.5.3 (24 May 2024)"
+
+<img src="{{ site.baseurl }}/assets/images/debM1-000-4.jpg" style="width:960px;"><br><br>
+
+[&#x213C;](#)<br id="idxXXX">
+
+

@@ -1,0 +1,1 @@
+winget install "windows terminal" --source "msstore"

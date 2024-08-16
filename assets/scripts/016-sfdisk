@@ -1,0 +1,15 @@
+# REV01: Sun 17 Sep 2023 21:30
+# START: Thu 29 Jun 2023 09:00
+sync
+# CLEAN OLD DISK
+dd if=/dev/zero of=/dev/vdb bs=1M count=1
+sync
+# SFDISK is a script-oriented tool for partitioning.
+sfdisk /dev/vdb <<< "
+label: dos
+device: /dev/vdb
+unit: sectors
+sector-size: 512
+/dev/vdb1: type=83, start= 2048, size=20480
+/dev/vdb2: type=83, start=22528
+"

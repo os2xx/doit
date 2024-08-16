@@ -1,0 +1,13 @@
+# ROOT
+[ -f /etc/apt/sources.list ] && cp /etc/apt/sources.list /etc/apt/zOLDsources.list
+cat > /etc/apt/sources.list <<< "
+# Fri 16 Jun 2023 09:00
+deb https://deb.debian.org/debian/ bookworm                  main contrib non-free non-free-firmware
+deb https://deb.debian.org/debian/ bookworm-updates          main contrib non-free non-free-firmware
+deb https://deb.debian.org/debian/ bookworm-proposed-updates main contrib non-free non-free-firmware
+deb https://deb.debian.org/debian/ bookworm-backports        main contrib non-free non-free-firmware
+deb https://security.debian.org/   bookworm-security         main contrib non-free non-free-firmware
+"
+# UPDATE - UPGRADE - AUTOREMOVE
+apt update && apt upgrade -y && apt full-upgrade -y && apt --purge autoremove -y
+

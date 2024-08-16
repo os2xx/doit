@@ -1,0 +1,4 @@
+DEBS="
+fuse
+"
+apt update && apt upgrade -y && apt install -y $DEBS

@@ -1,0 +1,136 @@
+---
+title:  Windows PowerShell and Terminal
+description:
+  How to install Windows PowerShell and Windows Terminal
+tagline: Windows, PowerShell, Terminal
+---
+
+[&#x213C;](#idxXXX)<br id="idx00">
+
+## List of Contents
+* [Installing PowerShell Version 7](#idx01)
+* [Installing Windows Terminal (Recommended Way)](#idx02)
+* [Installing Windows Terminal (Alternate Way)](#idx03)
+* [Setting PowerShell 7](#idx04)
+  * [PowerShell Font Size](#idx05)
+  * [PowerShell Screen Size](#idx06)
+* [WinGet Update and Upgrade](#idx07)
+* [Uninstall](#idx08)
+
+[&#x213C;](#)<br id="idx01">
+
+## Installing PowerShell Version 7
+
+<br>
+
+```
+{% raw %}
+(> assets/scripts/017-wingetPowerShell1 <)
+{% endraw %}
+```
+
+<br>
+
+```
+{% raw %}
+(> assets/scripts/017-wingetPowerShell2 <)
+{% endraw %}
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-01.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idx02">
+## Installing Windows Terminal (Recommended Way)
+
+It is recommended to install Windows Terminal from the Microsoft Store.
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-02.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idx03">
+## Installing Windows Terminal (Alternate Way)
+
+The alternate way to install Windows Terminal is with winget command line (not recommended).
+
+<br>
+
+```
+{% raw %}
+(> assets/scripts/017-wingetTerminal1 <)
+{% endraw %}
+```
+
+<br>
+
+```
+{% raw %}
+(> assets/scripts/017-wingetTerminal2 <)
+{% endraw %}
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-03.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idx04">
+## Setting PowerShell 7
+
+The program is set when first used.
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-04.jpg" style="width:960px;">
+<br>
+<br><br>
+<img src="{{ site.baseurl }}/assets/images/dospA-05.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idx05">
+## PowerShell Font Size
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-06.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idx06">
+## PowerShell Screen Size
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-07.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idx07">
+## WinGet Update and Upgrade
+
+<br>
+
+Upgrading from PowerShell version 7.3.4 to version 7.3.5.
+
+<br>
+
+```
+
+winget update
+
+winget upgrade --id Microsoft.Powershell --source winget
+
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospB-01.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idx08">
+## Uninstall
+
+<br>
+
+```
+winget uninstall --id Microsoft.Powershell
+
+```
+
+[&#x213C;](#)<br id="idxXXX">
+

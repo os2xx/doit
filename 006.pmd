@@ -1,0 +1,155 @@
+---
+title:  "Installing Jekyll On Debian"
+description:
+   This page is about how to install Jekyll with Rbenv on a VirtualBox Debian Guest.
+   Why Rbenv?  Because This Is How Me Do It!
+   If it works today, there is no warranty if it will still work the day after.
+tagline:
+   Jekyll, VirtualBox
+---
+
+[&#x213C;](#idxXXX)<br id="idx000">
+<hr>
+{% include inc005.html %}
+<hr>
+[&#x213C;](#)<br id="idx001">
+
+# PART 2: User Mode
+
+### (user) Test X11 with xclock
+
+* You should have installed "xclock" (x11-apps) on your Debian guest.
+* You should enable option X11 when ssh to the virtual guest.
+* Your NAT ports may be different. Assuming user "cbkadal" with local port is "6023".
+
+```
+ssh -X -p 6023 cbkadal@localhost
+
+```
+* Test it if you can display "xclock" on your host.
+
+```
+xclock
+
+```
+
+<img src="{{ site.baseurl }}/assets/images/doit-007.jpg" style="width:960px;">
+
+[&#x213C;](#)<br id="idx002">
+### assets/scripts/clean-home.sh
+
+* This script (clean-home.sh) purges whatever was installed previously (but failed) at $HOME.
+
+```
+(> assets/scripts/clean-home.sh <)
+```
+
+* You might “copy and paste” that file or fetch it with:
+
+```
+wget https://doit.vlsm.org/assets/scripts/clean-home.sh
+
+```
+
+* Run the script:
+
+```
+bash clean-home.sh
+
+```
+
+<br>
+* Append ("copy and paste") this following to either file:
+  * $HOME/.bash_profile or
+    * $HOME/.profile (if .bash_profile not exists).
+  * <span style="color:red; font-weight:bold; font-size:larger;">DO IT NOW!</span>
+
+
+```
+export PATH="$HOME/.rbenv/bin:$PATH"
+[ -d $HOME/.rbenv/bin/ ] && eval "$(rbenv init -)"
+
+```
+
+[&#x213C;](#)<br id="idx003">
+### RBENV
+
+* Script#1 to install RUBY with RBENV
+
+```
+(> assets/scripts/set-rbenv1.sh <)
+```
+
+* You might “copy and paste” that file or fetch it with:
+
+```
+wget https://doit.vlsm.org/assets/scripts/set-rbenv1.sh
+
+```
+
+* Run the script:
+
+```
+if   [ -f $HOME/.bash_profile ] ; then
+  source $HOME/.bash_profile
+elif [ -f $HOME/.profile ] ; then
+  source $HOME/.profile
+fi
+bash set-rbenv1.sh
+
+```
+<br>
+
+* Script#2 
+
+```
+(> assets/scripts/set-rbenv2.sh <)
+```
+
+* You might “copy and paste” that file or fetch it with:
+
+```
+wget https://doit.vlsm.org/assets/scripts/set-rbenv2.sh
+
+```
+
+* Run the script:
+  * If .bash_profile does not exists, try .profile
+
+```
+if   [ -f $HOME/.bash_profile ] ; then
+  source $HOME/.bash_profile
+elif [ -f $HOME/.profile ] ; then
+  source $HOME/.profile
+fi
+bash set-rbenv2.sh
+
+```
+
+[&#x213C;](#)<br id="idx004">
+## Test: Clone a GitHub Page
+
+### INPUT
+```
+mkdir -pv $HOME/git/
+cd        $HOME/git/
+rm -rf    $HOME/git/template/
+git clone git@github.com:/yforku/template.git
+cd        template/
+bundle install
+bundle clean --force
+if   [ -f $HOME/.bash_profile ] ; then
+  source $HOME/.bash_profile
+elif [ -f $HOME/.profile ] ; then
+  source $HOME/.profile
+fi
+bundle exec jekyll serve -H 0.0.0.0
+
+```
+
+### Test "localhost:5000" on Host
+
+On VirtualBox, do not forget to redirect port 127.0.0.1:5000 (Host) to port 10.0.2.15:4000 (Guest).
+
+[&#x213C;](#)<br id="idxXXX">
+

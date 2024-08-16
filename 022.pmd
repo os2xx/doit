@@ -1,0 +1,61 @@
+---
+title:  ADDUSER
+description:
+  How to add users
+tagline: adduser
+---
+
+[&#x213C;](#idxXXX)<br id="idx000">
+
+## ADDUSER
+
+* Example, add a new user “dummy”.
+  (account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>)
+
+```
+adduser dummy
+
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-25.jpg" style="width:960px;">
+<br>
+[&#x213C;](#)<br id="idx001"><br>
+
+Local test:
+
+```
+slogin dummy@localhost
+
+```
+<br>
+
+<img src="{{ site.baseurl }}/assets/images/dospA-26.jpg" style="width:960px;">
+<br>
+[&#x213C;](#)<br id="idx002"><br>
+
+* Bad Name = an Account wiht capital letter(s). Eg. “CicakBinKadal”
+
+```
+adduser CicakBinKadal
+
+adduser --allow-bad-names CicakBinKadal
+
+```
+
+<img src="{{ site.baseurl }}/assets/images/dospA-27.jpg" style="width:960px;">
+<br>
+[&#x213C;](#)<br id="idx003"><br>
+
+Local test:
+
+```
+slogin CicakBinKadal@localhost
+
+```
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-28.jpg" style="width:960px;">
+<br>
+
+[&#x213C;](#)<br id="idxXXX">

@@ -1,0 +1,32 @@
+---
+title:  sources.list
+description:
+  How set sources.list
+tagline: sources.list
+---
+
+[&#x213C;](#idxXXX)<br id="idx00">
+
+## sources.list
+
+The /etc/apt/sources.list file is a configuration file used in the Debian Linux distributions.
+It specifies the software repositories from which the APT (Advanced Package Tool) 
+package manager should fetch software packages and updates. 
+This file is essential for managing software installation, updates, and upgrades on a Linux system.
+
+Run this following by copy-paste the following
+(account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>):
+
+```
+{% raw %}
+(> assets/scripts/021-sources.list <)
+{% endraw %}
+```
+
+[&#x213C;](#)<br id="idx01">
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/dospA-24.jpg" style="width:960px;">
+<br><br>
+
+[&#x213C;](#)<br id="idxXXX">

@@ -1,0 +1,27 @@
+cat > $HOME/.doZERO.sh << EOF
+#!/bin/bash
+# REV04: Wed 04 Oct 2023 18:00
+# REV03: Sun 10 Sep 2023 15:00
+# REV02: Tue 27 Jun 2023 16:00
+# START: Fri 16 Jun 2023 16:00
+# .doZERO.sh
+
+TMPF=tmptmp.bin
+
+for II in /tmp /mnt/lfs /mnt/\$(hostname) ; do
+  [ -d \$II/ ] || continue
+  echo "==== ===="
+  rm -fv \$II/\$TMPF
+  df \$II/ | tail -1
+  echo -n "WAIT  ..."
+  dd if=/dev/zero of=\$II/\$TMPF bs=4M >& /dev/null
+  echo ""
+  df \$II/ | tail -1
+  rm -fv \$II/\$TMPF
+  df \$II/ | tail -1
+  sync
+done
+echo "==== ===="
+exit
+EOF
+### #####

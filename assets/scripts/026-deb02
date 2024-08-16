@@ -1,0 +1,13 @@
+DEBS="
+bc
+bison
+build-essential
+flex
+git
+gnupg
+libelf-dev
+libncurses-dev
+libssl-dev
+rsync
+"
+apt update && apt upgrade -y && apt install -y $DEBS

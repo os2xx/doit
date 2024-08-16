@@ -1,0 +1,11 @@
+# REV04: Mon 04 Sep 2023 20:00
+# REV03: Fri 16 Jun 2023 09:00
+# REV02: Mon 31 Jan 2022 13:00
+# REV01: Sat 29 Jan 2022 11:00
+# START: Mon 15 Feb 2021 11:00
+
+deb https://deb.debian.org/debian/ bookworm                  main contrib non-free non-free-firmware
+deb https://deb.debian.org/debian/ bookworm-updates          main contrib non-free non-free-firmware
+deb https://deb.debian.org/debian/ bookworm-proposed-updates main contrib non-free non-free-firmware
+deb https://deb.debian.org/debian/ bookworm-backports        main contrib non-free non-free-firmware
+deb https://security.debian.org/   bookworm-security         main contrib non-free non-free-firmware

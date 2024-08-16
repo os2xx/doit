@@ -1,0 +1,20 @@
+who am i
+
+cd
+
+pwd
+
+ls -al .do*
+
+# To set symbolic link from /bin/sh to /bin/bash (account: root)
+[ -f .doBASH.sh ] && bash .doBASH.sh
+
+# To alter DNS Servers (account: root)
+[ -f .doDNS.sh ] && bash .doDNS.sh
+
+# Clean HardDisk by filling zero (account: root)
+[ -f .doZERO.sh ] && bash .doZERO.sh
+
+# Update Debian (account: root)
+[ -f .doUPDATE.sh ] && bash .doUPDATE.sh
+

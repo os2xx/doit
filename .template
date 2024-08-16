@@ -1,0 +1,57 @@
+---
+title:  TTT
+description:
+   DDD DDD
+tagline: T1, T2
+---
+
+[&#x213C;](#idxXXX)<br id="idx00">
+
+## List of Contents
+* [XXX1](#idx01)
+* [XXX2](#idx02)
+
+[&#x213C;](#)<br id="idx01">
+
+## XXX1
+
+<img src="{{ site.baseurl }}/assets/images/doit-004.jpg" style="width:960px;">
+<br>
+[&#x213C;](#)<br><br>
+
+[](X 13 XXXXXX)
+<br>
+### INPUT
+```
+
+```
+
+### OUTPUT
+```
+
+===== TL;DR =====
+```
+
+
+[](X 12 XXXXX)
+<br>
+###
+XXX
+
+```
+{% raw %}
+(> 
+XXX
+<)
+{% endraw %}
+```
+
+
+```
+123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789
+         1         2         3         4         5         6         7         8         9
+
+```
+
+[&#x213C;](#)<br id="idxXXX">
+
