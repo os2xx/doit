@@ -76,6 +76,8 @@ tagline: VirtualBox, VirtualDisk
 [&#x213C;](#)<br id="idx013">
 ## Crosscheck /dev/sdb
 
+First, start (boot) your system, and next, log in.
+
 * Account: <span style="color:red; font-weight:bold; font-size:larger;">root</span>
 * Run:
 
@@ -85,6 +87,9 @@ lsblk
 ```
 
 <img src="{{ site.baseurl }}/assets/images/do23-013.jpg" style="width:960px;"><br><br>
+
+In this case, the next disk is 
+<span style="color:red; font-weight:bold; font-size:larger;">/dev/sdb</span>
 
 [&#x213C;](#)<br id="idx014">
 ## Partitioning 32GB
