@@ -1,5 +1,7 @@
 DEBS="
 fuse
+mtools
+dosfstools
 systemd-resolved
 "
 apt update && apt upgrade -y && apt install -y $DEBS
