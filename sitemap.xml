@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="https//www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https//doit.vlsm.org/</loc>
+<lastmod>2024-11-18</lastmod>
+</url>
+<url>
+<loc>https//doit.vlsm.org/008.html</loc>
+<lastmod>2024-11-18</lastmod>
+</url>
+<url>
 <loc>https//doit.vlsm.org/001.html</loc>
 <lastmod>2024-11-09</lastmod>
 </url>
@@ -26,10 +34,6 @@
 </url>
 <url>
 <loc>https//doit.vlsm.org/007.html</loc>
-<lastmod>2024-11-09</lastmod>
-</url>
-<url>
-<loc>https//doit.vlsm.org/008.html</loc>
 <lastmod>2024-11-09</lastmod>
 </url>
 <url>
