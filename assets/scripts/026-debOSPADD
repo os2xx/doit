@@ -1,4 +1,5 @@
 DEBS="
+floppyd
 fuse
 mtools
 dosfstools
