@@ -1,5 +1,5 @@
 ---
-title:  "UTM MacOS M1: Linux/ARM64 6.11 Kernel Configuration"
+title:  "UTM MacOS M1: Linux/ARM64 6.12 Kernel Configuration"
 description:
    This page is about how to compile Linux Kernel ARM64 on MacOS M1 UTM Guest.
 tagline:
@@ -7,7 +7,7 @@ tagline:
 ---
 
 <br>
-### UTM MacOS M1: Linux/ARM64 6.11 Kernel Configuration
+### UTM MacOS M1: Linux/ARM64 6.12 Kernel Configuration
 
 * [Download Config](assets/configs/config-linux-kernel-arm64.txt)
   * See also [UMT MacOS M1: How to compile Linux Kernel on a Debian Guest](011.md)
